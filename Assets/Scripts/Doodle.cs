@@ -69,7 +69,8 @@ public class Doodle : MonoBehaviour
             {
                 metersText.text = "Вы дошли до " + counter.account + " m";
             }
-            coinsText.text = "Всего заработано" + coinCollect.coinCountInGame;
+            coinsText.text = "Всего собрано " + coinCollect.coinCountInGame;
+            coinCollect.SaveCoinCount();
             Time.timeScale = 0f;
         }
     }
