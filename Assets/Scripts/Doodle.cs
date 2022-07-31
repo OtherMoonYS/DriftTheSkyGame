@@ -8,13 +8,15 @@ public class Doodle : MonoBehaviour
 {
     public static Doodle instance;
 
-    float horizontal;
+    private float horizontal;
     public Rigidbody2D DoodleRigid;
     private SpriteRenderer sp;
+    private CoinCollect coinCollect;
 
     [Header("Death")]
     public GameObject deathMenu;
     public Text metersText;
+    public Text coinsText;
     private MeterCounter counter;
     private int record;
     [HideInInspector]public bool newRecord;
@@ -27,8 +29,8 @@ public class Doodle : MonoBehaviour
 
         sp = GetComponent<SpriteRenderer>();
         counter = FindObjectOfType<MeterCounter>();
+        coinCollect = FindObjectOfType<CoinCollect>();
     }
-
 
     void FixedUpdate()
     {
@@ -52,9 +54,9 @@ public class Doodle : MonoBehaviour
         }        
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.collider.name == "DeadZone")
+        if (other.collider.name == "DeadZone")
         {            
             record = counter.CountHighestAccount();
             PlayerPrefs.SetInt("Record", record);
@@ -67,7 +69,16 @@ public class Doodle : MonoBehaviour
             {
                 metersText.text = "Вы дошли до " + counter.account + " m";
             }
+            coinsText.text = "Всего заработано" + coinCollect.coinCountInGame;
             Time.timeScale = 0f;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            coinCollect.CoinCollected();
+            Destroy(other.gameObject);
         }
     }
 }
