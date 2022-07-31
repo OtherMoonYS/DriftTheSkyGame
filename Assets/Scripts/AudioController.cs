@@ -10,11 +10,11 @@ public class AudioController : MonoBehaviour
     public Slider slider;
 
     public AudioClip clip;
-    public AudioSource audio;
+    public AudioSource audioSrc;
 
     void Update()
     {
-        audio.volume = slider.value;
+        audioSrc.volume = slider.value;
     }
     public void OnOffAudio()
     {
@@ -31,6 +31,6 @@ public class AudioController : MonoBehaviour
     }
     public void PlaySound()
     {
-        audio.PlayOneShot(clip);
+        audioSrc.PlayOneShot(clip);
     }
 }
