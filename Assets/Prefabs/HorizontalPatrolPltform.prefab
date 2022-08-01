@@ -93,7 +93,7 @@ Transform:
   - {fileID: 6290241829649191550}
   - {fileID: 2442352535330474498}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2442352535330474499
 GameObject:
@@ -402,4 +402,4 @@ MonoBehaviour:
   points:
   - {fileID: 2442352534233618237}
   - {fileID: 2442352534628018290}
-  patrolSpeed: 5
+  patrolSpeed: 2.5

@@ -215,7 +215,7 @@ MonoBehaviour:
   points:
   - {fileID: 8718344026823541172}
   - {fileID: 4960412509267534325}
-  patrolSpeed: 5
+  patrolSpeed: 2.5
 --- !u!1 &5607278090629258801
 GameObject:
   m_ObjectHideFlags: 0
