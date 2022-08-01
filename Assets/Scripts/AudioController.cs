@@ -7,7 +7,8 @@ public class AudioController : MonoBehaviour
     public Sprite audioOff;
     public GameObject buttonAudio;
     private Image buttonAudioImage;
-    private bool isActive;
+    private bool isActive = true;
+    private float volume;
 
     public Slider slider;
 
@@ -17,16 +18,29 @@ public class AudioController : MonoBehaviour
     private void Awake()
     {
         buttonAudioImage = buttonAudio.GetComponent<Image>();
+        if (PlayerPrefs.HasKey("AudioVolume"))
+            volume = PlayerPrefs.GetFloat("AudioVolume");
+        else
+            volume = 0.5f;
+
+        slider.value = volume;
+        audioSrc.volume = slider.value;
     }
     void Update()
     {
         if (isActive == false)
         {
-            audioSrc.volume = 0;
+            volume = 0;
         }
         else
         {
-            audioSrc.volume = slider.value;
+            volume = slider.value;            
+        }
+
+        if (audioSrc.volume != volume)
+        {
+            audioSrc.volume = volume;
+            PlayerPrefs.SetFloat("AudioVolume", volume);
         }
     }
     public void OnOffAudio()
