@@ -284,6 +284,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34708509}
   m_CullTransparentMesh: 1
+--- !u!1 &137520368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8729572132418924096, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
+  m_PrefabInstance: {fileID: 8729572131417568329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217903344
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +487,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390896940
 GameObject:
@@ -581,7 +586,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5935196356479230020, guid: 16c7ef4df9ac2874c902235dc1ab89eb, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5935196356479230020, guid: 16c7ef4df9ac2874c902235dc1ab89eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1001,7 +1006,7 @@ RectTransform:
   - {fileID: 1554895945}
   - {fileID: 390896941}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1164,6 +1169,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8729572132418924103, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
   m_PrefabInstance: {fileID: 8729572131417568329}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1202821651
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137520368}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12428018, y: 0.32773176}
+  m_Size: {x: 8.495289, y: 13.094536}
+  m_Direction: 0
 --- !u!1 &1258859723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,6 +2041,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2045413899, guid: 5acd7954f51b35b45b4dac63bb97b311, type: 3}
+    - target: {fileID: 8729572132418924101, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
+      propertyPath: m_Radius
+      value: 4.7946625
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729572132418924101, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03649189
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729572132418924101, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.33587262
+      objectReference: {fileID: 0}
     - target: {fileID: 8729572132418924101, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
       propertyPath: m_IsTrigger
       value: 0

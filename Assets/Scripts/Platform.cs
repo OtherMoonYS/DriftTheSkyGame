@@ -9,7 +9,7 @@ public class Platform : MonoBehaviour
 
     private void Start()
     {
-        _transform = GetComponent<Transform>();
+
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
