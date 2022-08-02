@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Doodle : MonoBehaviour
@@ -20,6 +17,7 @@ public class Doodle : MonoBehaviour
     private MeterCounter counter;
     private int record;
     [HideInInspector]public bool newRecord;
+    public GameObject[] onDeathDisable;
     void Start()
     {       
         if (instance == null)
@@ -71,6 +69,12 @@ public class Doodle : MonoBehaviour
             }
             coinsText.text = "Всего собрано " + coinCollect.coinCountInGame;
             coinCollect.SaveCoinCount();
+
+            foreach (GameObject obj in onDeathDisable)
+            {
+                obj.SetActive(false);
+            }
+
             Time.timeScale = 0f;
         }
     }

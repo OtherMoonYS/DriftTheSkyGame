@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PatrolPlatform : MonoBehaviour
@@ -21,6 +19,5 @@ public class PatrolPlatform : MonoBehaviour
 
         if (Vector2.Distance(_transform.position, points[moveIndex].position) < 0.2f && moveIndex == 1)
             moveIndex = 0;
-
     }
 }

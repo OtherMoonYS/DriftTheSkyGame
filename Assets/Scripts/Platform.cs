@@ -1,16 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
     public float forceJump;
-    private Transform _transform;
 
-    private void Start()
-    {
-
-    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.relativeVelocity.y < 0)
@@ -21,7 +14,7 @@ public class Platform : MonoBehaviour
 
     public void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.name == "DeadZone") 
+        if (collision.collider.name == "DeadZoneForPlatform") 
         {            
             Destroy(gameObject);
         }

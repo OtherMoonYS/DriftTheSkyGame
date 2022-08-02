@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;  
 using UnityEngine.UI;                   
 
@@ -22,8 +20,7 @@ public class MeterCounter : MonoBehaviour
         highestAccount = PlayerPrefs.GetInt("Record");
 
         doodle = FindObjectOfType<Doodle>();
-    }
-   
+    }   
     private void Update()
     {
         Vector2 playerPos = player.position;

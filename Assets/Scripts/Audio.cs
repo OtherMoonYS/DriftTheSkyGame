@@ -11,9 +11,4 @@ public class Audio : MonoBehaviour
         volume = PlayerPrefs.GetFloat("AudioVolume");
         audioSrc.volume = volume;
     }
-    
-    void Update()
-    {
-        
-    }
 }
