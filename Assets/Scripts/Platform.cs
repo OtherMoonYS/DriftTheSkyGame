@@ -2,7 +2,7 @@
 
 public class Platform : MonoBehaviour
 {
-    public float forceJump;
+    public float forceJump = 7.5f;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
