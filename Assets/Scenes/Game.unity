@@ -2478,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 2045413899, guid: 5acd7954f51b35b45b4dac63bb97b311, type: 3}
     - target: {fileID: 8729572132418924102, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
       propertyPath: speed
-      value: 10.04
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8729572132418924102, guid: 864a37cb345dbc34e893ee3efb4546b7, type: 3}
       propertyPath: coinsText
