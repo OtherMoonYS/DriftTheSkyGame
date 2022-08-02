@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 8943046245039653528}
   - component: {fileID: 8229696930924722327}
   m_Layer: 0
-  m_Name: PlatformBlank (1)
+  m_Name: 12m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
