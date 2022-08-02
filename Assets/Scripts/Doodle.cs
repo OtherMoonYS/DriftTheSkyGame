@@ -7,8 +7,10 @@ public class Doodle : MonoBehaviour
 
     private float horizontal;
     public Rigidbody2D DoodleRigid;
-    private SpriteRenderer sp;
     private CoinCollect coinCollect;
+    private Transform _transform;
+    private bool facingRight = true;
+    public float speed;
 
     [Header("Death")]
     public GameObject deathMenu;
@@ -25,9 +27,9 @@ public class Doodle : MonoBehaviour
             instance = this;
         }
 
-        sp = GetComponent<SpriteRenderer>();
         counter = FindObjectOfType<MeterCounter>();
         coinCollect = FindObjectOfType<CoinCollect>();
+        _transform = GetComponent<Transform>();
     }
 
     void FixedUpdate()
@@ -35,21 +37,21 @@ public class Doodle : MonoBehaviour
         if (Application.platform == RuntimePlatform.Android)
         {
             horizontal = Input.acceleration.x;
-            DoodleRigid.velocity = new Vector2(horizontal * 10f, DoodleRigid.velocity.y);
-            if (Input.acceleration.x < 0)
-            {
-                sp.flipX = false;
-            }
-            if (Input.acceleration.x > 0)
-            {
-                sp.flipX = true;
-            }
         }
         else
         {
-            horizontal = Input.GetAxis("Horizontal");
-            DoodleRigid.velocity = new Vector2(horizontal * 10f, DoodleRigid.velocity.y);
-        }        
+            horizontal = Input.GetAxis("Horizontal");            
+        }
+
+        DoodleRigid.velocity = new Vector2(horizontal * speed, DoodleRigid.velocity.y);
+        if (horizontal < 0 && facingRight)
+        {
+            Flip();
+        }
+        if (horizontal > 0 && !facingRight)
+        {
+            Flip();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -89,5 +91,12 @@ public class Doodle : MonoBehaviour
             coinCollect.CoinCollected();
             Destroy(other.gameObject);
         }        
+    }
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = _transform.localScale;
+        Scaler.x *= -1;
+        _transform.localScale = Scaler;
     }
 }

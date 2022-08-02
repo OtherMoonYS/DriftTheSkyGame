@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8729572132418924103}
   - component: {fileID: 8729572132418924100}
-  - component: {fileID: 8729572132418924101}
   - component: {fileID: 8729572132418924098}
   - component: {fileID: 8729572132418924102}
   m_Layer: 0
@@ -87,22 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8729572132418924101
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8729572132418924096}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0124339005, y: 0.13901931}
-  serializedVersion: 2
-  m_Radius: 6.1799946
 --- !u!50 &8729572132418924098
 Rigidbody2D:
   serializedVersion: 4
@@ -137,3 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoodleRigid: {fileID: 8729572132418924098}
+  deathMenu: {fileID: 0}
+  metersText: {fileID: 0}
+  coinsText: {fileID: 0}
+  newRecord: 0
+  onDeathDisable: []
