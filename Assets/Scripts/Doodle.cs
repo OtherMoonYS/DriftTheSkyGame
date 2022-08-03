@@ -71,22 +71,19 @@ public class Doodle : MonoBehaviour
         {            
             Death();
         }        
-        else if (other.collider.CompareTag("Enemy"))
-        {
-            Death();
-        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Coin"))
-        {
-            return;
-        }
-        else
+        if (other.CompareTag("Coin"))
         {
             coinCollect.CoinCollected();
             Destroy(other.gameObject);
-        }        
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            Death();
+        }
     }
     void Flip()
     {
