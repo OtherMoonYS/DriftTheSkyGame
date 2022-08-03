@@ -153,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290241829042562719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7164, y: -3.6012, z: -0.10299616}
+  m_LocalPosition: {x: 2.7164, y: -3.6012, z: 1}
   m_LocalScale: {x: 0.97134876, y: 0.19519676, z: 0.70832}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290241829649191545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5755, y: 0.39, z: 0}
+  m_LocalPosition: {x: -2.5755, y: 0.39, z: 1}
   m_LocalScale: {x: 0.14920135, y: 0.1448852, z: 0.32825}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -336,6 +336,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 2442352535044783640}
     m_Modifications:
+    - target: {fileID: 6630261910990893263, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6630261911462315050, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
       propertyPath: m_Name
       value: PatrolPlatform
@@ -358,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6630261911462315053, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.034815
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6630261911462315053, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
       propertyPath: m_LocalRotation.w
