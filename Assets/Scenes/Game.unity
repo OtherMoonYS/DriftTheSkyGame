@@ -1576,15 +1576,24 @@ MonoBehaviour:
   - {fileID: 5565423862831806766, guid: 53d474c8a5e996b4dbdaf565a8942bbb, type: 3}
   - {fileID: 5565423862831806766, guid: 774460b0056a96c4dbe49cc43a121bd6, type: 3}
   - {fileID: 5565423862831806766, guid: 55890efdac370154a86e92f219cbd01a, type: 3}
-  - {fileID: 5565423862831806766, guid: 3bb8f95e1cd83864baf97608f2ba23f0, type: 3}
+  - {fileID: 5565423862831806766, guid: a954ce678e94cd944956375de90a2f0e, type: 3}
   - {fileID: 5565423862831806766, guid: f532f950851a9fc4dbf828e753b2b6ea, type: 3}
   - {fileID: 5565423862831806766, guid: 8fb5811c40a071e4d894a04972f14689, type: 3}
   - {fileID: 5565423862831806766, guid: e7ae97eb99542404f9bcfeaaf4cc6ae6, type: 3}
   - {fileID: 5565423862831806766, guid: c166aec86067d474bb015d2c4be769b1, type: 3}
   platformMiddleBlanks:
   - {fileID: 8192264915229580968, guid: 69b599463ead3ff4faaeff4504f5e3c9, type: 3}
+  - {fileID: 8192264915229580968, guid: ed07f4e879375894f9b837bad4f6fd64, type: 3}
+  - {fileID: 5565423862831806766, guid: 3bb8f95e1cd83864baf97608f2ba23f0, type: 3}
+  - {fileID: 5565423862831806766, guid: bd566275853f1e5419cccea9f0aa5b20, type: 3}
+  - {fileID: 5565423862831806766, guid: 3c06e874a00fb304fa489c0b1b6fda67, type: 3}
+  - {fileID: 5565423862831806766, guid: 1376160af38fc2a49aabcec07a2ff3f8, type: 3}
+  - {fileID: 5565423862831806766, guid: 1df3a8a6253b85a4fbb48409275530cb, type: 3}
+  - {fileID: 5565423862831806766, guid: 1cf4661882295f8428468c0eca452117, type: 3}
+  - {fileID: 5565423862831806766, guid: daec928189f276e46a0ce9f4f5b2b6fa, type: 3}
+  - {fileID: 5565423862831806766, guid: c4dfa9d0c24d35741b467a5b8de1fc98, type: 3}
   platformHighBlanks:
-  - {fileID: 8622107918767157799, guid: 4a7bfde775d3fc84bb1a80af965dbe7b, type: 3}
+  - {fileID: 0}
   platformStartBlanks:
   - {fileID: 5565423862831806766, guid: 96c8e04cc6060624f9a0cfa7652d4c66, type: 3}
   - {fileID: 5565423862831806766, guid: 51906d10898309d4a89c0f4c9e0366f4, type: 3}
