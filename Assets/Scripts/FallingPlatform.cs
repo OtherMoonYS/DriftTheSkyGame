@@ -3,20 +3,37 @@ using UnityEngine;
 public class FallingPlatform : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D box;
+    private Transform player;
+    private Transform _transform;
+    private bool canFall;
+
+    public float transformPosY;
+    public float playerPosY;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        box = GetComponent<BoxCollider2D>();
+        _transform = GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
         rb.isKinematic = true; 
     }
-        
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void Update()
     {
-        if (collision.gameObject.GetComponent<Doodle>() != null && collision.relativeVelocity.y < 0)
+        transformPosY = _transform.position.y;
+        playerPosY = player.position.y;
+        canFall = playerPosY + 0.5f > transformPosY;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && canFall)
         {
             rb.isKinematic = false;
-            box.enabled = false;
+        }
+        else if (collision.gameObject.name.Equals("DeathZoneForPlatform"))
+        {
+            Destroy(gameObject);
         }
     }
 }
