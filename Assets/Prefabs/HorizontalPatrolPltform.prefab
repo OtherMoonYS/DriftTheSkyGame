@@ -86,8 +86,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2442352535044783641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.24, y: 5.73, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10.24, y: 5.7666, z: 1}
+  m_LocalScale: {x: 1, y: 1.2778124, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6290241829649191550}
@@ -241,8 +241,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6290241829649191545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.72, y: 0.39, z: 0}
-  m_LocalScale: {x: 0.20230691, y: 0.1448852, z: 0.32825}
+  m_LocalPosition: {x: -2.5755, y: 0.39, z: 0}
+  m_LocalScale: {x: 0.14920135, y: 0.1448852, z: 0.32825}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6290241829042562716}
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e615a971c0672c448346a7dca2a7240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceJump: 10
+  forceJump: 8
 --- !u!1001 &812901423330661971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345,8 +345,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6630261911462315053, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.14920135
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630261911462315053, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.72
+      value: -2.5755
       objectReference: {fileID: 0}
     - target: {fileID: 6630261911462315053, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
       propertyPath: m_LocalPosition.y
@@ -384,6 +388,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6630261911462315056, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
+      propertyPath: forceJump
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b333fe814fd449d42ad2a8490fffd923, type: 3}
@@ -402,4 +410,4 @@ MonoBehaviour:
   points:
   - {fileID: 2442352534233618237}
   - {fileID: 2442352534628018290}
-  patrolSpeed: 2.5
+  patrolSpeed: 1.5
