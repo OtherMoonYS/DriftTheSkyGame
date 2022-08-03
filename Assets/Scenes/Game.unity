@@ -1568,7 +1568,19 @@ MonoBehaviour:
   cameraTrf: {fileID: 586384028}
   Y: 10
   platformEasyBlanks:
-  - {fileID: 8622107918767157799, guid: 5bb41075b7ab22e42a12fe891e2ad1cb, type: 3}
+  - {fileID: 5565423862831806766, guid: f51adb3f07e95314c9e74edb3dcbb51e, type: 3}
+  - {fileID: 5565423862831806766, guid: ca4322db3037d544999a532a3801e4dd, type: 3}
+  - {fileID: 5565423862831806766, guid: 8b27ac105a54946449896cfdf749bdcb, type: 3}
+  - {fileID: 5565423862831806766, guid: 1a4a30a78ea61f34396f674dfdd71307, type: 3}
+  - {fileID: 5565423862831806766, guid: 1a4420e16ec917743a1b482facea9f73, type: 3}
+  - {fileID: 5565423862831806766, guid: 53d474c8a5e996b4dbdaf565a8942bbb, type: 3}
+  - {fileID: 5565423862831806766, guid: 774460b0056a96c4dbe49cc43a121bd6, type: 3}
+  - {fileID: 5565423862831806766, guid: 55890efdac370154a86e92f219cbd01a, type: 3}
+  - {fileID: 5565423862831806766, guid: 3bb8f95e1cd83864baf97608f2ba23f0, type: 3}
+  - {fileID: 5565423862831806766, guid: f532f950851a9fc4dbf828e753b2b6ea, type: 3}
+  - {fileID: 5565423862831806766, guid: 8fb5811c40a071e4d894a04972f14689, type: 3}
+  - {fileID: 5565423862831806766, guid: e7ae97eb99542404f9bcfeaaf4cc6ae6, type: 3}
+  - {fileID: 5565423862831806766, guid: c166aec86067d474bb015d2c4be769b1, type: 3}
   platformMiddleBlanks:
   - {fileID: 8192264915229580968, guid: 69b599463ead3ff4faaeff4504f5e3c9, type: 3}
   platformHighBlanks:
@@ -1578,7 +1590,7 @@ MonoBehaviour:
   - {fileID: 5565423862831806766, guid: 51906d10898309d4a89c0f4c9e0366f4, type: 3}
   - {fileID: 5565423862831806766, guid: ab9ace09eb8fcba4092a22d301ca8e55, type: 3}
   easyBlanks: 200
-  middleBlanks: 400
+  middleBlanks: 500
   highBlanks: 2147483647
 --- !u!4 &1415684883
 Transform:
