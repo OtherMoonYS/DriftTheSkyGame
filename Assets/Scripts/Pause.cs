@@ -6,33 +6,20 @@ public class Pause : MonoBehaviour
 {
     public GameObject pausePanel;
     private bool isPause;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        if (isPause)
-        {
-            pausePanel.SetActive(true);
-            Time.timeScale = 0;
-        }
-        else
-        {
-            pausePanel.SetActive(false);
-            Time.timeScale = 1;
-        }
-    }
+   
     public void OnPause()
     {
         if (isPause)
         {
             isPause = false;
+            pausePanel.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
             isPause = true;
+            pausePanel.SetActive(false);
+            Time.timeScale = 1;
         }
     }
 }

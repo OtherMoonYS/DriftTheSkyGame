@@ -40,6 +40,7 @@ public class MeterCounter : MonoBehaviour
         {
             highestAccount = currentAccount;
             doodle.newRecord = true;
+            PlayerPrefs.SetInt("Record", highestAccount);
             return highestAccount;
         }
         else

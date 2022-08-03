@@ -11,6 +11,7 @@ public class Doodle : MonoBehaviour
     private Transform _transform;
     private bool facingRight = true;
     public float speed;
+
     [Header("Raycast")]
     public LayerMask trap;
     public float rayDistance;
@@ -19,6 +20,7 @@ public class Doodle : MonoBehaviour
     public GameObject deathMenu;
     public Text metersText;
     public Text coinsText;
+    public Text recordText;
     private MeterCounter counter;
     private int record;
     [HideInInspector] public bool newRecord;
@@ -69,6 +71,10 @@ public class Doodle : MonoBehaviour
         {            
             Death();
         }        
+        else if (other.collider.CompareTag("Enemy"))
+        {
+            Death();
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -92,8 +98,9 @@ public class Doodle : MonoBehaviour
     void Death()
     {
         record = counter.CountHighestAccount();
-        PlayerPrefs.SetInt("Record", record);
+
         deathMenu.SetActive(true);
+
         if (newRecord)
         {
             metersText.text = "Новый рекорд " + counter.account + " m!!!";
@@ -102,8 +109,11 @@ public class Doodle : MonoBehaviour
         {
             metersText.text = "Вы дошли до " + counter.account + " m";
         }
-        coinsText.text = "Всего собрано " + coinCollect.coinCountInGame;
+
+        coinsText.text = "Всего собрано: " + coinCollect.coinCountInGame;
         coinCollect.SaveCoinCount();
+
+        recordText.text = "Ваш рекорд: " + record + " m";
 
         foreach (GameObject obj in onDeathDisable)
         {
