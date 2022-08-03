@@ -12,14 +12,14 @@ public class Pause : MonoBehaviour
         if (isPause)
         {
             isPause = false;
-            pausePanel.SetActive(true);
-            Time.timeScale = 0;
+            pausePanel.SetActive(false);
+            Time.timeScale = 1;
         }
         else
         {
-            isPause = true;
-            pausePanel.SetActive(false);
-            Time.timeScale = 1;
+            isPause = true;            
+            pausePanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
