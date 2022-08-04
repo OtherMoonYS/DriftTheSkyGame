@@ -34,8 +34,8 @@ public class Pause : MonoBehaviour
         {
             isPause = true;            
             pausePanel.SetActive(true);
-            accountText.text = $"Высота: {counter.account} m";
-            coinsText.text = $"Количество монет: {coins.coinCountInGame}";
+            accountText.text = $"Текущий счет: {counter.account} m";
+            coinsText.text = $"Собрано монет: {coins.coinCountInGame}";
             foreach (GameObject obj in disableObj)
             {
                 obj.SetActive(false);
