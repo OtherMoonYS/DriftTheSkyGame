@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3704018872347753249
+--- !u!1 &948249185490834639
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5969577084014238025}
-  - component: {fileID: 5087354803597470140}
-  - component: {fileID: 8760428977144013975}
-  - component: {fileID: 7490862214328448565}
-  - component: {fileID: -886324735819782888}
-  m_Layer: 3
-  m_Name: Trap
+  - component: {fileID: 1365757462351418362}
+  - component: {fileID: 4896641241770177433}
+  m_Layer: 0
+  m_Name: Mace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5969577084014238025
+--- !u!4 &1365757462351418362
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3704018872347753249}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0673, y: -1.4992764, z: 1.0144}
-  m_LocalScale: {x: 0.080952965, y: 0.080952965, z: 0.080952965}
+  m_GameObject: {fileID: 948249185490834639}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 0.03, z: 1}
+  m_LocalScale: {x: 3.4342709, y: 3.4342709, z: 3.4342709}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 5969577084014238025}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5087354803597470140
+--- !u!212 &4896641241770177433
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3704018872347753249}
+  m_GameObject: {fileID: 948249185490834639}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,17 +73,52 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2c485f404f6b79e46bf40f28682b23d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f893162463a6d84d998562113f9c138, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 0.5}
+  m_Size: {x: 1.52, y: 1.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3704018872347753249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5969577084014238025}
+  - component: {fileID: 8760428977144013975}
+  - component: {fileID: 7490862214328448565}
+  - component: {fileID: -886324735819782888}
+  m_Layer: 3
+  m_Name: Trap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5969577084014238025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704018872347753249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0673, y: -1.4992764, z: 1.0144}
+  m_LocalScale: {x: 0.080952965, y: 0.080952965, z: 0.080952965}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1365757462351418362}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8760428977144013975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -100,18 +132,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007032633, y: -0.010726213}
+  m_Offset: {x: 0.0139068365, y: 0.010214567}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 1.52, y: 1.44}
     newSize: {x: 1, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.924167, y: 4.9020896}
+  m_Size: {x: 5.384817, y: 5.1114717}
   m_EdgeRadius: 0
 --- !u!50 &7490862214328448565
 Rigidbody2D:

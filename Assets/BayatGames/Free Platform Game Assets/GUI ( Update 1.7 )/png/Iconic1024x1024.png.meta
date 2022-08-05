@@ -1,9 +1,9 @@
 fileFormatVersion: 2
 guid: 9fb826f3ca5c937439ca036782864fa1
 TextureImporter:
-  fileIDToRecycleName: {}
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,9 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -31,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,11 +57,16 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -69,20 +77,713 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Iconic1024x1024_0
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 849
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b4a66bddad9324faf608120032abe4
+      internalID: 1619222642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_1
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 698
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33e1d720b3fce644bd77c3a41ac2eaa
+      internalID: 426813388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_2
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 700
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ec82aae9aaf4d46bc0e23bb84b16cd
+      internalID: 446393796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_3
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 699
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ef0969b4965f5468e5c2f0d124fc64
+      internalID: 1045735275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_4
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 701
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ed4a2e4f892714d86d0e486377795c
+      internalID: -854255786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_5
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 626
+        width: 75
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ced54548af0f9c4c8f2fcf151e30116
+      internalID: 1987544156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_6
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 626
+        width: 67
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9c9710076a0554d80a54d322a7466a
+      internalID: -1934149975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_7
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 625
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83e371193e287748a12b3dc44e92289
+      internalID: -1107265060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_8
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 626
+        width: 70
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fd5125163179147b809f32da1a3e17
+      internalID: -2042754571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 180
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f9c1831b355a34ea4c45b6e70e60fc
+      internalID: 1866505261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_14
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 184
+        width: 70
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfbf25e76a7b0c4eb1a4ec468f87cb9
+      internalID: 1115820087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_15
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 182
+        width: 69
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010d4e9104ae64b4cbd26d22e71bc133
+      internalID: 143769730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_16
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 182
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b764de74fdc829b4d9af9af445c3f4ee
+      internalID: -1216959603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_17
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 775
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e13ec0ca672ee146b706ec428e54248
+      internalID: 1218018220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_18
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 772
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1070ead2ab94fb749aba245208a15775
+      internalID: -1474142726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_19
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 772
+        width: 71
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893743c0b2dd874459db7921dddbb5ef
+      internalID: -1426072793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_20
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 774
+        width: 69
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b63ce82cd39ebe4192d3ca405996469
+      internalID: -1739351320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_21
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 921
+        width: 73
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd6009db88437141b6facf63ba82c26
+      internalID: -1692170266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_22
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 849
+        width: 70
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffa0644aa44c75438bc3339e9eda025
+      internalID: -336977809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_23
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 849
+        width: 73
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057cf7efc8646af41947f79e07ffe02b
+      internalID: 207457449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_24
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 848
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1750655c8829543b92f833f27a7ce5
+      internalID: -77358615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_25
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 846
+        width: 70
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadb1a02be9e8e0459d1b1b29510bc71
+      internalID: -388426433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_26
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 922
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddece487e0670a489783e97bc2fd66d
+      internalID: -308180467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_27
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 922
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd4c2d40a4a3bd4fa3f27f53b318234
+      internalID: -2083854927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_28
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 921
+        width: 69
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac4a820375ff4540a97ddd7e993ce0c
+      internalID: 2143819700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_29
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 554
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc7d97a1053ed44b8c23859d8512983
+      internalID: 1463776241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_30
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 553
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439b2ec499507cd45972e052f387716a
+      internalID: 1190666147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_31
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 553
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c618f746811a2eb4eae76dc88f7372c8
+      internalID: 9928074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconic1024x1024_32
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 551
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26f395589c51704d8f880a73354fd9e
+      internalID: 651350284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 6520481edf223924bb3f88f40ad5e214
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Iconic1024x1024_19: 1123970251
+      Iconic1024x1024_4: -949212531
+      Iconic1024x1024_17: -2042754571
+      Iconic1024x1024_32: -1474142726
+      Iconic1024x1024_20: 838202692
+      Iconic1024x1024_10: 426813388
+      Iconic1024x1024_25: 1166270443
+      Iconic1024x1024_0: -186001568
+      Iconic1024x1024_22: 978343567
+      Iconic1024x1024_8: 780381677
+      Iconic1024x1024_5: 1056956670
+      Iconic1024x1024_30: -1216959603
+      Iconic1024x1024_2: -245909855
+      Iconic1024x1024_15: -1934149975
+      Iconic1024x1024_31: 1218018220
+      Iconic1024x1024_24: -1685175833
+      Iconic1024x1024_14: 1987544156
+      Iconic1024x1024_9: 1619222642
+      Iconic1024x1024_3: -1408025745
+      Iconic1024x1024_13: -854255786
+      Iconic1024x1024_18: 1173647047
+      Iconic1024x1024_21: 2038924104
+      Iconic1024x1024_11: 446393796
+      Iconic1024x1024_12: 1045735275
+      Iconic1024x1024_6: -1483107137
+      Iconic1024x1024_7: -239523975
+      Iconic1024x1024_23: 918389954
+      Iconic1024x1024_29: 143769730
+      Iconic1024x1024_28: 1115820087
+      Iconic1024x1024_26: -1453527162
+      Iconic1024x1024_27: 1866505261
+      Iconic1024x1024_16: -1107265060
+      Iconic1024x1024_1: -1605168316
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
