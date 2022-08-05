@@ -25,6 +25,12 @@ public class Doodle : MonoBehaviour
     private int record;
     [HideInInspector] public bool newRecord;
     public GameObject[] onDeathDisable;
+
+    [Header("Bonus")]
+    public float startAnvulnerabilityTime;
+    private float anvulnerabilityTime;
+    private bool anvulnerability;
+    private bool isAssign;
     void Start()
     {
         if (instance == null)
@@ -48,7 +54,11 @@ public class Doodle : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal");
         }
 
-        DoodleRigid.velocity = new Vector2(horizontal * speed, DoodleRigid.velocity.y);
+        DoodleRigid.velocity = new Vector2(horizontal * speed, DoodleRigid.velocity.y);        
+    }
+
+    private void Update()
+    {
         if (horizontal < 0 && facingRight)
         {
             Flip();
@@ -61,7 +71,26 @@ public class Doodle : MonoBehaviour
         RaycastHit2D ray = Physics2D.Raycast(_transform.position, Vector2.up, rayDistance, trap);
         if (ray.collider != null)
         {
-            Death();
+            if (anvulnerability == false)
+                Death();
+        }
+
+        if (startAnvulnerabilityTime > 0)
+        {
+            if(isAssign == false)
+                Assign();
+        }
+
+        if (anvulnerabilityTime <= 0)
+        {
+            startAnvulnerabilityTime = 0;
+            anvulnerability = false;
+            isAssign = false;
+        }
+        else
+        {
+            anvulnerabilityTime -= Time.deltaTime;
+            anvulnerability = true;
         }
     }
 
@@ -69,7 +98,8 @@ public class Doodle : MonoBehaviour
     {
         if (other.collider.name == "DeadZone")
         {            
-            Death();
+            if (anvulnerability == false)
+                Death();
         }        
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -82,7 +112,8 @@ public class Doodle : MonoBehaviour
 
         if (other.GetComponent<Enemy>() != null)
         {
-            Death();
+            if (anvulnerability == false)
+                Death();
         }
     }
     void Flip()
@@ -118,5 +149,11 @@ public class Doodle : MonoBehaviour
         }
 
         Time.timeScale = 0;
+    }
+
+    void Assign()
+    {
+        anvulnerabilityTime = startAnvulnerabilityTime;
+        isAssign = true;
     }
 }
