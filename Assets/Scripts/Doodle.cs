@@ -80,7 +80,7 @@ public class Doodle : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Enemy"))
+        if (other.GetComponent<Enemy>() != null)
         {
             Death();
         }

@@ -12,10 +12,17 @@ public class Pause : MonoBehaviour
     private MeterCounter counter;
     private CoinCollect coins;
 
+    [Header("Sprites")]
+    public Sprite OnPauseSp;
+    public Sprite OffPauseSp;
+    private Image pauseButImage;
+    public GameObject pauseBut;
+
     private void Start()
     {
         counter = FindObjectOfType<MeterCounter>();
         coins = FindObjectOfType<CoinCollect>();
+        pauseButImage = pauseBut.GetComponent<Image>();
     }
 
     public void OnPause()
@@ -28,6 +35,7 @@ public class Pause : MonoBehaviour
             {
                 obj.SetActive(true);
             }
+            pauseButImage.sprite = OffPauseSp;
             Time.timeScale = 1;
         }
         else
@@ -40,6 +48,7 @@ public class Pause : MonoBehaviour
             {
                 obj.SetActive(false);
             }
+            pauseButImage.sprite = OnPauseSp;
             Time.timeScale = 0;
         }
     }
