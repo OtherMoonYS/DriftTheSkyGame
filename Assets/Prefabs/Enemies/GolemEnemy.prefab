@@ -167,6 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1c253c5fa94e74093d4e55f89410cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: 0
+  enemy: 1
   points: []
   batSpeed: 0
