@@ -134,7 +134,7 @@ MonoBehaviour:
   onDeathDisable:
   - {fileID: 0}
   - {fileID: 0}
-  startDeathCount: 4
+  startDeathCount: 3
   startAnvulnerabilityTime: 0
 --- !u!70 &7876054184612379421
 CapsuleCollider2D:

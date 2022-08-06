@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class CoinCollect : MonoBehaviour
 {
-    public int coinCountInGame;
+    public float coinCountInGame;
     public int coinCount;
     public Text coinText;
 
@@ -22,7 +22,7 @@ public class CoinCollect : MonoBehaviour
     }
     public void SaveCoinCount()
     {
-        int finishCoinCount = coinCount + coinCountInGame;
+        int finishCoinCount = coinCount + (int)coinCountInGame;
         PlayerPrefs.SetInt("Coins", finishCoinCount);
     }
 }
