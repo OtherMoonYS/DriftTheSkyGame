@@ -134,6 +134,8 @@ MonoBehaviour:
   onDeathDisable:
   - {fileID: 0}
   - {fileID: 0}
+  startDeathCount: 4
+  startAnvulnerabilityTime: 0
 --- !u!70 &7876054184612379421
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

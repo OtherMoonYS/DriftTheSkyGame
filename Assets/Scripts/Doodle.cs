@@ -25,6 +25,10 @@ public class Doodle : MonoBehaviour
     private int record;
     [HideInInspector] public bool newRecord;
     public GameObject[] onDeathDisable;
+    public int startDeathCount;
+    private int deathCount;
+    private bool canMinus = true;
+    private InerstitialAds inerstitialAds;
 
     [Header("Bonus")]
     public float startAnvulnerabilityTime;
@@ -41,6 +45,9 @@ public class Doodle : MonoBehaviour
         counter = FindObjectOfType<MeterCounter>();
         coinCollect = FindObjectOfType<CoinCollect>();
         _transform = GetComponent<Transform>();
+        inerstitialAds = FindObjectOfType<InerstitialAds>();
+
+        deathCount = PlayerPrefs.GetInt("deathCount");
     }
 
     void FixedUpdate()
@@ -148,6 +155,12 @@ public class Doodle : MonoBehaviour
             obj.SetActive(false);
         }
 
+        if (canMinus)
+        {
+            DeathMinus();
+            canMinus = false;
+        }                
+            
         Time.timeScale = 0;
     }
 
@@ -155,5 +168,17 @@ public class Doodle : MonoBehaviour
     {
         anvulnerabilityTime = startAnvulnerabilityTime;
         isAssign = true;
+    }
+    void DeathMinus()
+    {
+        if (deathCount == 0)
+        {
+            deathCount = startDeathCount;
+            PlayerPrefs.SetInt("deathCount", deathCount);
+            inerstitialAds.ShowAd();
+            return;
+        }
+        deathCount--;
+        PlayerPrefs.SetInt("deathCount", deathCount);        
     }
 }
