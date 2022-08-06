@@ -8,10 +8,11 @@ public class Platform : MonoBehaviour
     public enum PlatformType { Usuale, Bonus };
     public PlatformType type;
     
-    public enum BonusTime { Little, Middle, High }
+    public enum BonusTime {Small, Little, Middle, High }
     public BonusTime bonusTime;
 
     [Header("Bonuses")]
+    public float smallBonusTime;
     public float littleBonusTime;
     public float middleBonusTime;
     public float highBonusTime;
@@ -27,7 +28,9 @@ public class Platform : MonoBehaviour
         {                
             if (type == PlatformType.Bonus)
             {
-                if (bonusTime == BonusTime.Little)
+                if(bonusTime == BonusTime.Small)
+                    doodle.startAnvulnerabilityTime = smallBonusTime;
+                else if (bonusTime == BonusTime.Little)
                     doodle.startAnvulnerabilityTime = littleBonusTime;
                 else if (bonusTime == BonusTime.Middle)
                     doodle.startAnvulnerabilityTime = middleBonusTime;
