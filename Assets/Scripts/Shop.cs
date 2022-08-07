@@ -10,6 +10,13 @@ public class Shop : MonoBehaviour
     private int skinIndex0;
     private int skinIndex1;
     private int skinIndex2;
+
+    public Text priceText;
+    public int[] prices;
+    public bool[] buy;
+    public bool[] selected;
+    public GameObject buyButton;
+    public GameObject selectButton;
     void Start()
     {        
         
@@ -24,11 +31,29 @@ public class Shop : MonoBehaviour
         if (skinsImages[0].sprite == skinsSprites[0])
         {
             skinsImages[0].sprite = skinsSprites[skinsSprites.Length - 1];
+            if (!buy[skinsSprites.Length - 1])
+                priceText.text = prices[prices.Length - 1].ToString();
+            else
+            {
+                if(selected[skinsSprites.Length - 1])
+                    priceText.text = "Выбрано";
+                else
+                    priceText.text = "Выбрать";
+            }
         }
         else
         {
             skinIndex0 = GetIndexSprite(skinsImages[0]);
             skinsImages[0].sprite = skinsSprites[skinIndex0 - 1];
+            if (!buy[skinIndex0 - 1])
+                priceText.text = prices[skinIndex0 - 1].ToString();
+            else
+            {
+                if (selected[skinIndex0 - 1])
+                    priceText.text = "Выбрано";
+                else
+                    priceText.text = "Выбрать";
+            }
         }
 
         if (skinsImages[1].sprite == skinsSprites[0])
@@ -56,11 +81,29 @@ public class Shop : MonoBehaviour
         if (skinsImages[0].sprite == skinsSprites[skinsSprites.Length - 1])
         {
             skinsImages[0].sprite = skinsSprites[0];
+            if (!buy[0])
+                priceText.text = prices[0].ToString();
+            else
+            {
+                if (selected[0])
+                    priceText.text = "Выбрано";
+                else
+                    priceText.text = "Выбрать";
+            }
         }
         else
         {
             skinIndex0 = GetIndexSprite(skinsImages[0]);
             skinsImages[0].sprite = skinsSprites[skinIndex0 + 1];
+            if (!buy[skinIndex0 + 1])
+                priceText.text = prices[skinIndex0 + 1].ToString();
+            else
+            {
+                if (selected[skinIndex0 + 1])
+                    priceText.text = "Выбрано";
+                else
+                    priceText.text = "Выбрать";
+            }
         }
 
         if (skinsImages[1].sprite == skinsSprites[skinsSprites.Length - 1])
@@ -93,5 +136,13 @@ public class Shop : MonoBehaviour
             }            
         }
         return 0;
+    }
+    public void Buy()
+    {
+
+    }
+    public void Select()
+    {
+        
     }
 }

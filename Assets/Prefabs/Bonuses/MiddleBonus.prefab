@@ -106,6 +106,11 @@ MonoBehaviour:
   littleBonusTime: 2
   middleBonusTime: 2
   highBonusTime: 2
+  Jump: {fileID: 7723917727144357193, guid: dd7a447e1110b7a41bc9a53f8513fb0b, type: 3}
+  LowBonus: {fileID: 6316635160116883075, guid: 15defa15e5903764db199f72e06f7ea5, type: 3}
+  MidBonus: {fileID: 605133704571602840, guid: 82579590cc866d7429a130470bbc4f0a, type: 3}
+  MaxBonus: {fileID: 1612040957989839470, guid: f37874810761d9042a3332feb5dd6843, type: 3}
+  PrujinaBonus: {fileID: 1668125092689363327, guid: 0dcada4bcb9f7344ba93d214f5a7ec1c, type: 3}
 --- !u!61 &3097774512074858810
 BoxCollider2D:
   m_ObjectHideFlags: 0
