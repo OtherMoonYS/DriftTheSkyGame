@@ -12,6 +12,9 @@ public class Scenes : MonoBehaviour
     public Text coinsText;
     private int coins;
 
+    public GameObject soundObj;
+    private Transform _transform;
+
     private void Start()
     {
         record = PlayerPrefs.GetInt("Record");
@@ -21,19 +24,28 @@ public class Scenes : MonoBehaviour
         coins = PlayerPrefs.GetInt("Coins");
         if (coinsText != null)
             coinsText.text = coins.ToString();
+
+        _transform = GetComponent<Transform>();
     }
     public void ChangeScenes(int numberScenes)
     {
         SceneManager.LoadScene(numberScenes);
+        Instantiate(soundObj, _transform.position, Quaternion.identity);
         Time.timeScale = 1;
     }
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+        Instantiate(soundObj, _transform.position, Quaternion.identity);
         Time.timeScale = 1;
     }
     public void Exit()
     {
         Application.Quit();
+        Instantiate(soundObj, _transform.position, Quaternion.identity);
+    }
+    public void ButSoundPlay()
+    {
+        Instantiate(soundObj, _transform.position, Quaternion.identity);
     }
 }

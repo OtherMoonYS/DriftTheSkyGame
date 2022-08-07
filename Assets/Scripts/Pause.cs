@@ -11,6 +11,8 @@ public class Pause : MonoBehaviour
     public Text coinsText;
     private MeterCounter counter;
     private CoinCollect coins;
+    public GameObject ButSound;
+    private Transform _transform;
 
     [Header("Sprites")]
     public Sprite OnPauseSp;
@@ -18,6 +20,10 @@ public class Pause : MonoBehaviour
     private Image pauseButImage;
     public GameObject pauseBut;
 
+    private void Awake()
+    {
+        _transform = GetComponent<Transform>();
+    }
     private void Start()
     {
         counter = FindObjectOfType<MeterCounter>();
@@ -36,6 +42,7 @@ public class Pause : MonoBehaviour
                 obj.SetActive(true);
             }
             pauseButImage.sprite = OffPauseSp;
+            Instantiate(ButSound, _transform.position, Quaternion.identity);
             Time.timeScale = 1;
         }
         else
@@ -49,6 +56,7 @@ public class Pause : MonoBehaviour
                 obj.SetActive(false);
             }
             pauseButImage.sprite = OnPauseSp;
+            Instantiate(ButSound, _transform.position, Quaternion.identity);
             Time.timeScale = 0;
         }
     }

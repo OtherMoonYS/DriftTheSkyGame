@@ -35,6 +35,12 @@ public class Doodle : MonoBehaviour
     private float anvulnerabilityTime;
     private bool anvulnerability;
     private bool isAssign;
+
+    [Header("Sounds")]
+    public GameObject HitByTrapEnemy;
+    public GameObject Upal;
+    public GameObject PickUpCoin;
+    private bool soundPlayed = false;
     void Start()
     {
         if (instance == null)
@@ -79,7 +85,15 @@ public class Doodle : MonoBehaviour
         if (ray.collider != null)
         {
             if (anvulnerability == false)
+            {
                 Death();
+                if (soundPlayed == false)
+                {
+                    Instantiate(HitByTrapEnemy, _transform.position, Quaternion.identity);
+                    soundPlayed = true;
+                }
+                
+            }
         }
 
         if (startAnvulnerabilityTime > 0)
@@ -104,9 +118,12 @@ public class Doodle : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.name == "DeadZone")
-        {            
+        {
             if (anvulnerability == false)
+            {
                 Death();
+                Instantiate(Upal, _transform.position, Quaternion.identity);
+            }
         }        
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -115,12 +132,17 @@ public class Doodle : MonoBehaviour
         {
             coinCollect.CoinCollected();
             Destroy(other.gameObject);
+            Instantiate(PickUpCoin, _transform.position, Quaternion.identity);
         }
 
         if (other.GetComponent<Enemy>() != null)
         {
             if (anvulnerability == false)
+            {
                 Death();
+                Instantiate(HitByTrapEnemy, _transform.position, Quaternion.identity);
+            }
+                
         }
     }
     void Flip()
