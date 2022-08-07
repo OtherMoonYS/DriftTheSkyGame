@@ -99,13 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e615a971c0672c448346a7dca2a7240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceJump: 13
+  forceJump: 15
   type: 1
   bonusTime: 0
-  smallBonusTime: 1.5
-  littleBonusTime: 3
-  middleBonusTime: 4
-  highBonusTime: 5
+  smallBonusTime: 2
+  littleBonusTime: 2
+  middleBonusTime: 2
+  highBonusTime: 2
 --- !u!61 &7737357589732904613
 BoxCollider2D:
   m_ObjectHideFlags: 0
