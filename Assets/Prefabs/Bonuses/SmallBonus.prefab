@@ -102,7 +102,7 @@ MonoBehaviour:
   forceJump: 13
   type: 1
   bonusTime: 0
-  smallBonusTime: 0
+  smallBonusTime: 2
   littleBonusTime: 3
   middleBonusTime: 4
   highBonusTime: 6
