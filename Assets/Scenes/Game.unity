@@ -1586,6 +1586,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5935196356479230021, guid: 16c7ef4df9ac2874c902235dc1ab89eb, type: 3}
+      propertyPath: soundObj
+      value: 
+      objectReference: {fileID: 5965095749635948220, guid: 7e4f791fd10ff07428395b072f286078, type: 3}
     - target: {fileID: 5935196356479230026, guid: 16c7ef4df9ac2874c902235dc1ab89eb, type: 3}
       propertyPath: m_Name
       value: Scenes
@@ -3332,7 +3336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.010185185, y: 0.45900002}
   m_AnchorMax: {x: 0.99166685, y: 0.5152778}
-  m_AnchoredPosition: {x: -51.999878, y: 0.3935547}
+  m_AnchoredPosition: {x: -51.99994, y: 0.3935547}
   m_SizeDelta: {x: -4.4000244, y: -4.6870117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051451921
@@ -3558,6 +3562,10 @@ PrefabInstance:
       propertyPath: deathMenu
       value: 
       objectReference: {fileID: 745027368}
+    - target: {fileID: 7876054184612379418, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
+      propertyPath: timeScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7876054184612379418, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
       propertyPath: PickUpCoin
       value: 

@@ -41,6 +41,8 @@ public class Doodle : MonoBehaviour
     public GameObject Upal;
     public GameObject PickUpCoin;
     private bool soundPlayed = false;
+    [Header("TimeScale")]
+    public float timeScale;
     void Start()
     {
         if (instance == null)
@@ -54,6 +56,8 @@ public class Doodle : MonoBehaviour
         inerstitialAds = FindObjectOfType<InerstitialAds>();
 
         deathCount = PlayerPrefs.GetInt("deathCount");
+
+        Time.timeScale = timeScale;
     }
 
     void FixedUpdate()
@@ -72,6 +76,8 @@ public class Doodle : MonoBehaviour
 
     private void Update()
     {
+        timeScale = Time.timeScale;
+
         if (horizontal < 0 && facingRight)
         {
             Flip();

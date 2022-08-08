@@ -33,11 +33,20 @@ public class Enemy : MonoBehaviour
             _transform.position = Vector2.MoveTowards(_transform.position, points[pointIndex].position, batSpeed * Time.deltaTime);
             if (Vector2.Distance(_transform.position, points[pointIndex].position) < 0.2f && pointIndex == 0)
             {
-                pointIndex = 1;
+                pointIndex = 1;                
             }
             else if (Vector2.Distance(_transform.position, points[pointIndex].position) < 0.2f && pointIndex == 1)
             {
                 pointIndex = 0;
+            }
+
+            if (_transform.position.x > points[pointIndex].position.x)
+            {
+                _transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            else if (_transform.position.x > points[pointIndex].position.x)
+            {
+                _transform.eulerAngles = new Vector3(0, 0, 0);
             }
         }
         else if (enemy == EnemyType.Slime)

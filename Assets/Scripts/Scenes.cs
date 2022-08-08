@@ -8,10 +8,6 @@ public class Scenes : MonoBehaviour
     public Text recordText;
     private int record;
 
-    [Header("Coins")]
-    public Text coinsText;
-    private int coins;
-
     public GameObject soundObj;
     private Transform _transform;
 
@@ -20,10 +16,6 @@ public class Scenes : MonoBehaviour
         record = PlayerPrefs.GetInt("Record");
         if(recordText != null)
             recordText.text = "Рекорд: " + record + " m";
-
-        coins = PlayerPrefs.GetInt("Coins");
-        if (coinsText != null)
-            coinsText.text = coins.ToString();
 
         _transform = GetComponent<Transform>();
     }
