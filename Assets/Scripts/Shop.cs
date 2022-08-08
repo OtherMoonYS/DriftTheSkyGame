@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    private Transform _transform;
     public Image[] skinsImages;
     public Sprite[] skinsSprites;
     private int skinIndex0;
@@ -20,9 +21,12 @@ public class Shop : MonoBehaviour
     public Animator priceAnim;
 
     public Text coinsText;
-    private int coins;
-
     public int coinCount;
+
+    [Header("Sounds")]
+    public GameObject DenegNeHvataet;
+    public GameObject UspeshnoKupilSkin;
+    public GameObject SkinVibran;
 
     private void Awake()
     {
@@ -34,7 +38,7 @@ public class Shop : MonoBehaviour
         for (int i = 0; i < selected.Length; i++)
         {
             selected[i] = PlayerPrefs.GetInt("Select" + i) == 1;
-        }
+        }        
         if (PlayerPrefs.GetInt("Buy1") == 0 && PlayerPrefs.GetInt("Buy2") == 0 && PlayerPrefs.GetInt("Buy3") == 0 && PlayerPrefs.GetInt("Buy4") == 0 && PlayerPrefs.GetInt("Buy5") == 0)
         {
             Select();
@@ -44,8 +48,10 @@ public class Shop : MonoBehaviour
     }
     private void Start()
     {
-        coins = PlayerPrefs.GetInt("Coins");
-        coinsText.text = coins.ToString();
+        coinsText.text = coinCount.ToString();
+
+        priceAnim = priceText.GetComponent<Animator>();
+        _transform = GetComponent<Transform>();
     }
 
     private void Update()
@@ -53,6 +59,18 @@ public class Shop : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ZeroOut();
+        }
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            coinCount = 0;
+            PlayerPrefs.SetInt("Coins", coinCount);
+            coinsText.text = coinCount.ToString();
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            coinCount += 1;
+            PlayerPrefs.SetInt("Coins", coinCount);
+            coinsText.text = coinCount.ToString();
         }
     }
 
@@ -178,7 +196,7 @@ public class Shop : MonoBehaviour
         {
             skinIndex2 = GetIndexSprite(skinsImages[2]);
             skinsImages[2].sprite = skinsSprites[skinIndex2 + 1];
-        }
+        }       
     }
     int GetIndexSprite(Image img)
     {
@@ -203,6 +221,13 @@ public class Shop : MonoBehaviour
             Select();
             buyButton.SetActive(false);
             selectButton.SetActive(true);
+            Instantiate(UspeshnoKupilSkin, _transform.position, Quaternion.identity);
+            coinsText.text = coinCount.ToString();
+        }
+        else
+        {
+            Instantiate(DenegNeHvataet, _transform.position, Quaternion.identity);
+            priceAnim.SetTrigger("DenegNeHvataet");
         }
     }
     public void Select()
@@ -225,6 +250,7 @@ public class Shop : MonoBehaviour
                     PlayerPrefs.SetInt("Select" + i, 0);
                 }
             }
+            Instantiate(SkinVibran, _transform.position, Quaternion.identity);
         }
     }
     void ZeroOut()
@@ -236,6 +262,6 @@ public class Shop : MonoBehaviour
         for (int i = 0; i < selected.Length; i++)
         {
             PlayerPrefs.SetInt("Select" + i, 0);
-        }
+        }        
     }
 }

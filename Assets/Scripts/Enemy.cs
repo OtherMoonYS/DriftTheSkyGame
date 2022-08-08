@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
             {
                 _transform.eulerAngles = new Vector3(0, 180, 0);
             }
-            else if (_transform.position.x > points[pointIndex].position.x)
+            else
             {
                 _transform.eulerAngles = new Vector3(0, 0, 0);
             }
