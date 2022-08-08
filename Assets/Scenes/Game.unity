@@ -3387,6 +3387,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4212050152803488437, guid: 10bd3fe50284e174480e260122a2dc21, type: 3}
   m_PrefabInstance: {fileID: 4212050153387954972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2112866021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2112866023}
+  - component: {fileID: 2112866022}
+  m_Layer: 0
+  m_Name: SwitchSkin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2112866022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112866021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f6b363b06c2e54abf8b333582bd089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doodleImg: {fileID: 7876054183617306895}
+  skins:
+  - {fileID: -1276508533, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
+  - {fileID: -1687081397, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
+  - {fileID: 1140245323, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
+  - {fileID: -1163567672, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
+  - {fileID: -2043001703, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
+--- !u!4 &2112866023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112866021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.277569, y: 0.15391178, z: 302.09164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4212050153387954972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3637,3 +3688,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
+--- !u!212 &7876054183617306895 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7876054184612379416, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
+  m_PrefabInstance: {fileID: 7876054183617306894}
+  m_PrefabAsset: {fileID: 0}

@@ -35,6 +35,10 @@ public class Shop : MonoBehaviour
         {
             selected[i] = PlayerPrefs.GetInt("Select" + i) == 1;
         }
+        if (PlayerPrefs.GetInt("Buy1") == 0 && PlayerPrefs.GetInt("Buy2") == 0 && PlayerPrefs.GetInt("Buy3") == 0 && PlayerPrefs.GetInt("Buy4") == 0 && PlayerPrefs.GetInt("Buy5") == 0)
+        {
+            Select();
+        }
         LeftSwitch();
         RightSwitch();
     }
@@ -207,7 +211,7 @@ public class Shop : MonoBehaviour
         if (!selected[selectIndex])
         {
             selected[selectIndex] = true;
-            PlayerPrefs.SetInt("Select" + selectIndex, 0);
+            PlayerPrefs.SetInt("Select" + selectIndex, 1);
             priceText.text = "Выбрано";
             for (int i = 0; i < selected.Length; i++)
             {
@@ -218,6 +222,7 @@ public class Shop : MonoBehaviour
                 else
                 {
                     selected[i] = false;
+                    PlayerPrefs.SetInt("Select" + i, 0);
                 }
             }
         }
