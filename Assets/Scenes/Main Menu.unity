@@ -2176,7 +2176,7 @@ MonoBehaviour:
   selected: 0100000000
   buyButton: {fileID: 759918400}
   selectButton: {fileID: 1734976049}
-  priceAnim: {fileID: 0}
+  priceAnim: {fileID: 681521562}
   coinsText: {fileID: 1054883047}
   coinCount: 0
   DenegNeHvataet: {fileID: 1452163932248012473, guid: ab9bf570a1f0b4f43a5b346cf62e25c1, type: 3}

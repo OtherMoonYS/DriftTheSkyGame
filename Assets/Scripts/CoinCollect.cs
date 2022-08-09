@@ -25,4 +25,13 @@ public class CoinCollect : MonoBehaviour
         int finishCoinCount = coinCount + (int)coinCountInGame;
         PlayerPrefs.SetInt("Coins", finishCoinCount);
     }
+    public void RaisingCoinCountInGame()
+    {
+        int lastCoinCountInGame = (int)coinCountInGame;
+        int newCoinCountInGame = Mathf.FloorToInt(coinCountInGame * 1.5f);
+        int raisingCoinCountInGame = newCoinCountInGame - lastCoinCountInGame;
+        coinCountInGame += raisingCoinCountInGame;
+        int finishCoinCount = coinCount + raisingCoinCountInGame;
+        PlayerPrefs.SetInt("Coins", finishCoinCount);
+    }
 }

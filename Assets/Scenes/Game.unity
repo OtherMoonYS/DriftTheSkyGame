@@ -964,6 +964,7 @@ MonoBehaviour:
   rewardedBut: {fileID: 75589960}
   androidID: Rewarded_Android
   iosID: Rewarded_IOS
+  coinsText: {fileID: 34708511}
 --- !u!1 &338202863
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     private string adID;
 
     private CoinCollect coins;
+    public Text coinsText;
+
+    private bool canRaising = true;
    
 
     void Awake()
@@ -24,7 +27,7 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         coins = FindObjectOfType<CoinCollect>();
     }
 
-    void LoadAd()
+    public void LoadAd()
     {
         Advertisement.Load(adID, this);
     }
@@ -67,13 +70,15 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     {
         if (placementId == adID && showCompletionState == UnityAdsShowCompletionState.COMPLETED)
         {
-            coins.coinCountInGame = RaisingCoins(coins.coinCountInGame);
-            rewardedBut.interactable = false;
+            if (canRaising)
+            {
+                coins.RaisingCoinCountInGame();
+                coinsText.text = "Всего собрано: " + coins.coinCountInGame;
+                rewardedBut.interactable = false;
+                canRaising = false;
+            }
+            
         }
     }
-    float RaisingCoins(float coins)
-    {
-        coins *= 1.5f;
-        return Mathf.Round(coins);
-    }
+
 }

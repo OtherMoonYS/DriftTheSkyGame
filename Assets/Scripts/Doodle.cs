@@ -29,12 +29,18 @@ public class Doodle : MonoBehaviour
     private int deathCount;
     private bool canMinus = true;
     private InerstitialAds inerstitialAds;
+    private RewardedAds rewAds;
 
     [Header("Bonus")]
     public float startAnvulnerabilityTime;
     private float anvulnerabilityTime;
     private bool anvulnerability;
-    private bool isAssign;
+    private bool shieldAnvulnerability;
+    public float startShieldAnvulnerabilityTime;
+    private float shieldAnvulnerabilityTime;
+    public GameObject shield;
+    private Animator shieldAnim;
+    private bool isAssign1;
 
     [Header("Sounds")]
     public GameObject HitByTrapEnemy;
@@ -54,8 +60,13 @@ public class Doodle : MonoBehaviour
         coinCollect = FindObjectOfType<CoinCollect>();
         _transform = GetComponent<Transform>();
         inerstitialAds = FindObjectOfType<InerstitialAds>();
+        rewAds = FindObjectOfType<RewardedAds>();
+        shieldAnim = shield.GetComponent<Animator>();
+
+        rewAds.LoadAd();
 
         deathCount = PlayerPrefs.GetInt("deathCount");
+        shieldAnvulnerabilityTime = startShieldAnvulnerabilityTime;
 
         Time.timeScale = timeScale;
     }
@@ -88,48 +99,90 @@ public class Doodle : MonoBehaviour
         }
 
         RaycastHit2D ray = Physics2D.Raycast(_transform.position, Vector2.up, rayDistance, trap);
+        RaycastHit2D leftRay = Physics2D.Raycast(_transform.position, Vector2.left, 0.15f, trap);
+        RaycastHit2D rightRay = Physics2D.Raycast(_transform.position, Vector2.right, 0.15f, trap);
         if (ray.collider != null)
         {
-            if (anvulnerability == false)
-            {
-                Death();
+            if (!anvulnerability && !shieldAnvulnerability)
+            {                
                 if (soundPlayed == false)
                 {
+                    Death();
+                    Instantiate(HitByTrapEnemy, _transform.position, Quaternion.identity);
+                    soundPlayed = true;
+                }                
+            }
+        }
+        else if (leftRay.collider != null)
+        {
+            if (!anvulnerability && !shieldAnvulnerability)
+            {
+                if (soundPlayed == false)
+                {
+                    Death();
                     Instantiate(HitByTrapEnemy, _transform.position, Quaternion.identity);
                     soundPlayed = true;
                 }
-                
+            }
+        }
+        else if (rightRay.collider != null)
+        {
+            if (!anvulnerability && !shieldAnvulnerability)
+            {
+                if (soundPlayed == false)
+                {
+                    Death();
+                    Instantiate(HitByTrapEnemy, _transform.position, Quaternion.identity);
+                    soundPlayed = true;
+                }
             }
         }
 
+
         if (startAnvulnerabilityTime > 0)
         {
-            if(isAssign == false)
-                Assign();
-        }
+            if(isAssign1 == false)
+                Assign1();
+        }        
 
         if (anvulnerabilityTime <= 0)
         {
             startAnvulnerabilityTime = 0;
             anvulnerability = false;
-            isAssign = false;
+            isAssign1 = false;
         }
         else
         {
             anvulnerabilityTime -= Time.deltaTime;
             anvulnerability = true;
         }
+
+        if (shieldAnvulnerability)
+        {
+            if (shieldAnvulnerabilityTime <= 0)
+            {
+                shieldAnvulnerability = false;
+                shieldAnvulnerabilityTime = startShieldAnvulnerabilityTime;
+                shield.SetActive(false);
+            }
+            else
+            {
+                shieldAnvulnerabilityTime -= Time.deltaTime;
+                shield.SetActive(true);
+                if (shieldAnvulnerabilityTime <= 2)
+                {
+                    shieldAnim.Play("ShieldAnim");
+                }
+            }
+        }        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.name == "DeadZone")
         {
-            if (anvulnerability == false)
-            {
-                Death();
-                Instantiate(Upal, _transform.position, Quaternion.identity);
-            }
+            Death();
+            Instantiate(Upal, _transform.position, Quaternion.identity);
         }        
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -140,15 +193,22 @@ public class Doodle : MonoBehaviour
             Destroy(other.gameObject);
             Instantiate(PickUpCoin, _transform.position, Quaternion.identity);
         }
+        else if (other.CompareTag("Shield"))
+        {
+            if (!shieldAnvulnerability)
+                shieldAnvulnerability = true;
+            else
+                shieldAnvulnerabilityTime = startShieldAnvulnerabilityTime;
+            Destroy(other.gameObject);
+        }
 
         if (other.GetComponent<Enemy>() != null)
         {
-            if (anvulnerability == false)
+            if (!anvulnerability && !shieldAnvulnerability)
             {
                 Death();
-                Instantiate(HitByTrapEnemy, _transform.position, Quaternion.identity);
-            }
-                
+                Instantiate(HitByTrapEnemy, _transform.position, Quaternion.identity);                   
+            }      
         }
     }
     void Flip()
@@ -192,10 +252,10 @@ public class Doodle : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    void Assign()
+    void Assign1()
     {
         anvulnerabilityTime = startAnvulnerabilityTime;
-        isAssign = true;
+        isAssign1 = true;
     }
     void DeathMinus()
     {
