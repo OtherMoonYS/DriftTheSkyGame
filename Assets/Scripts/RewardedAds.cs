@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
     public Button rewardedBut;
+    private Transform _transform;
 
     public string androidID = "Rewarded_Android";
     public string iosID = "Rewarded_IOS";
@@ -14,6 +15,8 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     public Text coinsText;
 
     private bool canRaising = true;
+
+    public GameObject doubleCoins;
    
 
     void Awake()
@@ -25,6 +28,7 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     {
         LoadAd();
         coins = FindObjectOfType<CoinCollect>();
+        _transform = GetComponent<Transform>();
     }
 
     public void LoadAd()
@@ -74,10 +78,10 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
             {
                 coins.RaisingCoinCountInGame();
                 coinsText.text = "Всего собрано: " + coins.coinCountInGame;
+                Instantiate(doubleCoins, _transform.position, Quaternion.identity);
                 rewardedBut.interactable = false;
                 canRaising = false;
-            }
-            
+            }            
         }
     }
 
