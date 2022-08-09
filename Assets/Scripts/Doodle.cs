@@ -198,7 +198,11 @@ public class Doodle : MonoBehaviour
             if (!shieldAnvulnerability)
                 shieldAnvulnerability = true;
             else
+            {
                 shieldAnvulnerabilityTime = startShieldAnvulnerabilityTime;
+                shieldAnim.Play("ShieldIdle");
+            }
+                
             Destroy(other.gameObject);
         }
 
