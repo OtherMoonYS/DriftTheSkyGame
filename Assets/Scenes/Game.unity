@@ -965,6 +965,7 @@ MonoBehaviour:
   androidID: Rewarded_Android
   iosID: Rewarded_IOS
   coinsText: {fileID: 34708511}
+  doubleCoins: {fileID: 0}
 --- !u!1 &338202863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,8 +2908,8 @@ MonoBehaviour:
   - {fileID: 8622107918767157799, guid: 4e92ecb5c54cb7a409c0c81586150ecd, type: 3}
   - {fileID: 8622107918767157799, guid: 24d0a749bd22d6a40af9709a5c4ae279, type: 3}
   - {fileID: 8622107918767157799, guid: 4628e51cdeb83d5459d6a57f74f37375, type: 3}
-  - {fileID: 5565423862831806766, guid: 7100a9874e768f44b941255187a367be, type: 3}
-  - {fileID: 8192264915229580968, guid: c7496e41661c56b418bdcd9a13cd35e1, type: 3}
+  - {fileID: 5565423862831806766, guid: 5f2fe5f53df938441a5af174e5a59a09, type: 3}
+  - {fileID: 8192264915229580968, guid: 7100a9874e768f44b941255187a367be, type: 3}
   platformStartBlanks:
   - {fileID: 5565423862831806766, guid: 96c8e04cc6060624f9a0cfa7652d4c66, type: 3}
   - {fileID: 5565423862831806766, guid: 51906d10898309d4a89c0f4c9e0366f4, type: 3}
@@ -3542,6 +3543,7 @@ MonoBehaviour:
   - {fileID: 1140245323, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
   - {fileID: -1163567672, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
   - {fileID: -2043001703, guid: db9285c09559fb14f8d2fe265b464ae8, type: 3}
+  type: 0
 --- !u!4 &2112866023
 Transform:
   m_ObjectHideFlags: 0
