@@ -11,8 +11,6 @@ public class AudioController : MonoBehaviour
     private float volume;
 
     public Slider slider;
-
-    public AudioClip clip;
     public AudioSource audioSrc;
 
     private void Awake()
@@ -55,9 +53,5 @@ public class AudioController : MonoBehaviour
             isActive = true;
             buttonAudioImage.sprite = audioOn;
         }
-    }
-    public void PlaySound()
-    {
-        audioSrc.PlayOneShot(clip);
     }
 }
