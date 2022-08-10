@@ -11,6 +11,7 @@ public class Doodle : MonoBehaviour
     private Transform _transform;
     private bool facingRight = true;
     public float speed;
+    private LanguageSwitch languageSwitch;
 
     [Header("Raycast")]
     public LayerMask trap;
@@ -63,6 +64,7 @@ public class Doodle : MonoBehaviour
         inerstitialAds = FindObjectOfType<InerstitialAds>();
         rewAds = FindObjectOfType<RewardedAds>();
         shieldAnim = shield.GetComponent<Animator>();
+        languageSwitch = FindObjectOfType<LanguageSwitch>();
 
         rewAds.LoadAd();
 
@@ -231,7 +233,8 @@ public class Doodle : MonoBehaviour
 
         if (newRecord)
         {
-            metersText.text = "Новый рекорд " + counter.account + "!";
+            string[] translates = new string[] { "Новый рекорд " + counter.account + "!", "New record" + counter.account + "!", "New record" + counter.account + "!", "New record" + counter.account + "!" };
+            metersText.text = languageSwitch.Translate(translates);
         }
         else
         {

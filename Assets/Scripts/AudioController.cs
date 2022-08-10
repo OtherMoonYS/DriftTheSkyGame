@@ -6,7 +6,7 @@ public class AudioController : MonoBehaviour
     public Sprite audioOn;
     public Sprite audioOff;
     public GameObject buttonAudio;
-    private Image buttonAudioImage;
+    public Image buttonAudioImage;
     private bool isActive = true;
     private float volume;
 
@@ -15,7 +15,6 @@ public class AudioController : MonoBehaviour
 
     private void Awake()
     {
-        buttonAudioImage = buttonAudio.GetComponent<Image>();
         if (PlayerPrefs.HasKey("AudioVolume"))
             volume = PlayerPrefs.GetFloat("AudioVolume");
         else
