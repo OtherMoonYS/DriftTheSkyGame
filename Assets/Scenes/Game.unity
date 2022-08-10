@@ -566,8 +566,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0422\u0435\u043A\u0443\u0449\u0438\u0439 \u0441\u0447\u0435\u0442: 100
-    m"
+  m_Text: "\u0422\u0435\u043A\u0443\u0449\u0438\u0439 \u0441\u0447\u0435\u0442: 100"
 --- !u!222 &212792183
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -877,7 +876,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u0430\u0448 \u0440\u0435\u043A\u043E\u0440\u0434: 100 m"
+  m_Text: "\u0412\u0430\u0448 \u0440\u0435\u043A\u043E\u0440\u0434: 100"
 --- !u!222 &312089564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -965,7 +964,7 @@ MonoBehaviour:
   androidID: Rewarded_Android
   iosID: Rewarded_IOS
   coinsText: {fileID: 34708511}
-  doubleCoins: {fileID: 0}
+  doubleCoins: {fileID: 8752204550125910863, guid: 22b60d44556f1674fb3a6f2ad61ac8e6, type: 3}
 --- !u!1 &338202863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0 m
+  m_Text: 0
 --- !u!4 &586384028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4212050153946878336, guid: 10bd3fe50284e174480e260122a2dc21, type: 3}
@@ -2272,7 +2271,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u041F\u043E\u0437\u0434\u0440\u0430\u0432\u043B\u044F\u0435\u043C!\n\u0412\u044B
-    \u0434\u043E\u0441\u0442\u0438\u0433\u043B\u0438 10 m"
+    \u0434\u043E\u0441\u0442\u0438\u0433\u043B\u0438 10"
 --- !u!222 &1059787401
 CanvasRenderer:
   m_ObjectHideFlags: 0

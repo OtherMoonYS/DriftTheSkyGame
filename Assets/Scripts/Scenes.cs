@@ -15,7 +15,7 @@ public class Scenes : MonoBehaviour
     {
         record = PlayerPrefs.GetInt("Record");
         if(recordText != null)
-            recordText.text = "Рекорд: " + record + " m";
+            recordText.text = "Рекорд: " + record;
 
         _transform = GetComponent<Transform>();
     }

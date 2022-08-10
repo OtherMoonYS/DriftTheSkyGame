@@ -230,17 +230,17 @@ public class Doodle : MonoBehaviour
 
         if (newRecord)
         {
-            metersText.text = "Новый рекорд " + counter.account + " m!!!";
+            metersText.text = "Новый рекорд " + counter.account + "!";
         }
         else
         {
-            metersText.text = "Вы дошли до " + counter.account + " m";
+            metersText.text = "Текущий счёт: " + counter.account;
         }
 
         coinsText.text = "Всего собрано: " + coinCollect.coinCountInGame;
         coinCollect.SaveCoinCount();
 
-        recordText.text = "Ваш рекорд: " + record + " m";
+        recordText.text = "Ваш рекорд: " + record;
 
         foreach (GameObject obj in onDeathDisable)
         {

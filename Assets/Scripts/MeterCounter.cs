@@ -29,7 +29,7 @@ public class MeterCounter : MonoBehaviour
         if (playerPos.y > pos)
         {
             account++;
-            accountText.text = account + " m";
+            accountText.text = account + "";
             startPos = playerPos;
         }
     }
