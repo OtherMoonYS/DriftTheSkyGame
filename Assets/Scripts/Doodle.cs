@@ -46,6 +46,7 @@ public class Doodle : MonoBehaviour
     public GameObject HitByTrapEnemy;
     public GameObject Upal;
     public GameObject PickUpCoin;
+    public GameObject shieldStart;
     private bool soundPlayed = false;
     [Header("TimeScale")]
     public float timeScale;
@@ -99,8 +100,8 @@ public class Doodle : MonoBehaviour
         }
 
         RaycastHit2D ray = Physics2D.Raycast(_transform.position, Vector2.up, rayDistance, trap);
-        RaycastHit2D leftRay = Physics2D.Raycast(_transform.position, Vector2.left, 0.15f, trap);
-        RaycastHit2D rightRay = Physics2D.Raycast(_transform.position, Vector2.right, 0.15f, trap);
+        RaycastHit2D leftRay = Physics2D.Raycast(_transform.position, Vector2.left, 0.25f, trap);
+        RaycastHit2D rightRay = Physics2D.Raycast(_transform.position, Vector2.right, 0.25f, trap);
         if (ray.collider != null)
         {
             if (!anvulnerability && !shieldAnvulnerability)
@@ -202,7 +203,7 @@ public class Doodle : MonoBehaviour
                 shieldAnvulnerabilityTime = startShieldAnvulnerabilityTime;
                 shieldAnim.Play("ShieldIdle");
             }
-                
+            Instantiate(shieldStart, _transform.position, Quaternion.identity);    
             Destroy(other.gameObject);
         }
 
@@ -272,5 +273,5 @@ public class Doodle : MonoBehaviour
         }
         deathCount--;
         PlayerPrefs.SetInt("deathCount", deathCount);        
-    }
+    }    
 }

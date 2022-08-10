@@ -2291,13 +2291,14 @@ GameObject:
   - component: {fileID: 1060640507}
   - component: {fileID: 1060640508}
   - component: {fileID: 1060640509}
+  - component: {fileID: 1060640510}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1060640507
 Transform:
   m_ObjectHideFlags: 0
@@ -2385,6 +2386,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1060640510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060640506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32fab24653c2cb6479f14540fb0cbc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldEnd: {fileID: 4555583744643155490, guid: e6cd70aeb78ed2c499d60e0e258208fb, type: 3}
 --- !u!1 &1179871212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,6 +3752,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745027368}
     - target: {fileID: 7876054184612379418, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
+      propertyPath: shieldEnd
+      value: 
+      objectReference: {fileID: 4555583744643155490, guid: e6cd70aeb78ed2c499d60e0e258208fb, type: 3}
+    - target: {fileID: 7876054184612379418, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
       propertyPath: timeScale
       value: 1
       objectReference: {fileID: 0}
@@ -3757,6 +3775,10 @@ PrefabInstance:
       propertyPath: rayDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7876054184612379418, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
+      propertyPath: shieldStart
+      value: 
+      objectReference: {fileID: 864435078535861396, guid: fd5aa9071530cee48acef8ace1b62f87, type: 3}
     - target: {fileID: 7876054184612379418, guid: d9c117dd1acb1fe42824d4aa0c22381d, type: 3}
       propertyPath: HitByTrapEnemy
       value: 

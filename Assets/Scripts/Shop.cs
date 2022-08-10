@@ -50,7 +50,6 @@ public class Shop : MonoBehaviour
     {
         coinsText.text = coinCount.ToString();
 
-        priceAnim = priceText.GetComponent<Animator>();
         _transform = GetComponent<Transform>();
     }
 
