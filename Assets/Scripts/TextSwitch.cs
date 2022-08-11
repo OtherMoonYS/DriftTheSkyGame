@@ -15,8 +15,6 @@ public class TextSwitch : MonoBehaviour
 
     void Update()
     {
-
-
         if (PlayerPrefs.GetInt("LanguageÐóñ") == 1)
         {
             text.text = translates[0];
