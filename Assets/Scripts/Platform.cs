@@ -5,6 +5,7 @@ public class Platform : MonoBehaviour
     public float forceJump = 7.5f;
     private Doodle doodle;
     private Transform _transform;
+    private RewardedAds rewAds;
 
     public enum PlatformType { Usuale, Bonus };
     public PlatformType type;
@@ -28,10 +29,12 @@ public class Platform : MonoBehaviour
     private void Awake()
     {
         _transform = GetComponent<Transform>();
+        rewAds = FindObjectOfType<RewardedAds>();
     }
     private void Start()
     {
         doodle = FindObjectOfType<Doodle>();
+        rewAds.LoadAd();
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

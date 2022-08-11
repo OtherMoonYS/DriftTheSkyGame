@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -6,6 +6,7 @@ public class Scenes : MonoBehaviour
 {
     [Header("Record")]
     public Text recordText;
+    private TranslateText translateText;
     private int record;
 
     public GameObject soundObj;
@@ -13,11 +14,18 @@ public class Scenes : MonoBehaviour
 
     private void Start()
     {
+        translateText = FindObjectOfType<TranslateText>();
         record = PlayerPrefs.GetInt("Record");
-        if(recordText != null)
-            recordText.text = "������: " + record;
-
+             
         _transform = GetComponent<Transform>();
+    }
+    private void Update()
+    {
+        if (recordText != null)
+        {
+            string[] translates = new string[] { "Рекорд: " + record, "Record: " + record, "Récord: " + record, "Record: " + record, "Rekord: " + record, "Рекорд: " + record };
+            recordText.text = translateText.Translate(translates);
+        }
     }
     public void ChangeScenes(int numberScenes)
     {

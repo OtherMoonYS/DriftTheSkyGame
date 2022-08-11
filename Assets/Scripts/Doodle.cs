@@ -11,7 +11,7 @@ public class Doodle : MonoBehaviour
     private Transform _transform;
     private bool facingRight = true;
     public float speed;
-    private LanguageSwitch languageSwitch;
+    private TranslateText translateText;
 
     [Header("Raycast")]
     public LayerMask trap;
@@ -64,7 +64,7 @@ public class Doodle : MonoBehaviour
         inerstitialAds = FindObjectOfType<InerstitialAds>();
         rewAds = FindObjectOfType<RewardedAds>();
         shieldAnim = shield.GetComponent<Animator>();
-        languageSwitch = FindObjectOfType<LanguageSwitch>();
+        translateText = FindObjectOfType<TranslateText>();
 
         rewAds.LoadAd();
 
@@ -233,18 +233,21 @@ public class Doodle : MonoBehaviour
 
         if (newRecord)
         {
-            string[] translates = new string[] { "Новый рекорд " + counter.account + "!", "New record" + counter.account + "!", "New record" + counter.account + "!", "New record" + counter.account + "!" };
-            metersText.text = languageSwitch.Translate(translates);
+            string[] translates = new string[] { "Новый рекорд " + counter.account + "!", "New record" + counter.account + "!", "Nuevo récord" + counter.account + "!", "Nuovo record" + counter.account + "!", "Neuer Rekord" + counter.account + "!", "Новий рекорд" + counter.account + "!"};
+            metersText.text = translateText.Translate(translates);
         }
         else
         {
-            metersText.text = "Текущий счёт: " + counter.account;
+            string[] translates = new string[] { "Текущий счёт: " + counter.account, "Current score: " + counter.account, "Cuenta corriente: " + counter.account, "Conto corrente: " + counter.account, "Girokonto: " + counter.account, "Поточний рахунок: " + counter.account, };
+            metersText.text = translateText.Translate(translates);
         }
 
-        coinsText.text = "Всего собрано: " + coinCollect.coinCountInGame;
+        string[] translates1 = new string[] { "Всего собрано: " + coinCollect.coinCountInGame, "Total collected: " + coinCollect.coinCountInGame, "Total recogido: " + coinCollect.coinCountInGame, "Totale raccolto: " + coinCollect.coinCountInGame, "Insgesamt gesammelt: " + coinCollect.coinCountInGame, "Всього зібрано: " + coinCollect.coinCountInGame };
+        coinsText.text = translateText.Translate(translates1);
         coinCollect.SaveCoinCount();
 
-        recordText.text = "Ваш рекорд: " + record;
+        string[] translates2 = new string[] { "Ваш рекорд: " + record, "Your record: " + record, "Su récord: " + record, "Il tuo record: " + record, "Ihr Rekord: " + record, "Ваш рекорд: " + record, };
+        recordText.text = translateText.Translate(translates2);
 
         foreach (GameObject obj in onDeathDisable)
         {

@@ -1,21 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class TextSwitch : MonoBehaviour
+public class TranslateText : MonoBehaviour
 {
-    private Text text;
-    [Header("Ðóñ, Eng, Esp, Ital, Deu, Óêð")]
-    public string[] translates;
-
-    void Start()
-    {
-        text = GetComponent<Text>();        
-    }
-
-    void Update()
-    {
-        text.text = Translate(translates);
-    }
     public string Translate(string[] translates)
     {
         if (PlayerPrefs.GetInt("LanguageÐóñ") == 1)

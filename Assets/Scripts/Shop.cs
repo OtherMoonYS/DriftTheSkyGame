@@ -1,4 +1,4 @@
-using UnityEngine;
+п»їusing UnityEngine;
 using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
@@ -19,6 +19,7 @@ public class Shop : MonoBehaviour
     public GameObject buyButton;
     public GameObject selectButton;
     public Animator priceAnim;
+    public TranslateText translateText;
 
     public Text coinsText;
     public int coinCount;
@@ -51,6 +52,8 @@ public class Shop : MonoBehaviour
         coinsText.text = coinCount.ToString();
 
         _transform = GetComponent<Transform>();
+
+        translateText = FindObjectOfType<TranslateText>();
     }
 
     private void Update()
@@ -75,6 +78,8 @@ public class Shop : MonoBehaviour
 
     public void LeftSwitch()
     {
+        string[] translates1 = new string[] { "Р’С‹Р±СЂР°РЅРѕ", "Active", "Activado", "Attivato", "Medizinisch", "РђРєС‚РёРІРѕРІР°РЅРёР№" };
+        string[] translates2 = new string[] { "Р’С‹Р±СЂР°С‚СЊ", "Choose", "Elegir", "Selezionare", "WГ¤hlen", "Р’РёР±СЂР°С‚Рё", };
         if (skinsImages[0].sprite == skinsSprites[0])
         {
             skinsImages[0].sprite = skinsSprites[skinsSprites.Length - 1];
@@ -85,11 +90,11 @@ public class Shop : MonoBehaviour
                 selectButton.SetActive(false);
             }
             else
-            {
+            {                
                 if (selected[skinsSprites.Length - 1])
-                    priceText.text = "Выбрано";
+                    priceText.text = translateText.Translate(translates1);
                 else
-                    priceText.text = "Выбрать";
+                    priceText.text = translateText.Translate(translates2);
                 buyButton.SetActive(false);
                 selectButton.SetActive(true);
             }
@@ -107,9 +112,9 @@ public class Shop : MonoBehaviour
             else
             {
                 if (selected[skinIndex0 - 1])
-                    priceText.text = "Выбрано";
+                    priceText.text = translateText.Translate(translates1);
                 else
-                    priceText.text = "Выбрать";
+                    priceText.text = translateText.Translate(translates2);
                 buyButton.SetActive(false);
                 selectButton.SetActive(true);
             }
@@ -137,6 +142,8 @@ public class Shop : MonoBehaviour
     }
     public void RightSwitch()
     {
+        string[] translates1 = new string[] { "Р’С‹Р±СЂР°РЅРѕ", "Active", "Activado", "Attivato", "Medizinisch", "РђРєС‚РёРІРѕРІР°РЅРёР№" };
+        string[] translates2 = new string[] { "Р’С‹Р±СЂР°С‚СЊ", "Choose", "Elegir", "Selezionare", "WГ¤hlen", "Р’РёР±СЂР°С‚Рё", };
         if (skinsImages[0].sprite == skinsSprites[skinsSprites.Length - 1])
         {
             skinsImages[0].sprite = skinsSprites[0];
@@ -149,9 +156,9 @@ public class Shop : MonoBehaviour
             else
             {
                 if (selected[0])
-                    priceText.text = "Выбрано";
+                    priceText.text = translateText.Translate(translates1);
                 else
-                    priceText.text = "Выбрать";
+                    priceText.text = translateText.Translate(translates2);
                 buyButton.SetActive(false);
                 selectButton.SetActive(true);
             }
@@ -169,9 +176,9 @@ public class Shop : MonoBehaviour
             else
             {
                 if (selected[skinIndex0 + 1])
-                    priceText.text = "Выбрано";
+                    priceText.text = translateText.Translate(translates1);
                 else
-                    priceText.text = "Выбрать";
+                    priceText.text = translateText.Translate(translates2);
                 buyButton.SetActive(false);
                 selectButton.SetActive(true);
             }
@@ -236,7 +243,8 @@ public class Shop : MonoBehaviour
         {
             selected[selectIndex] = true;
             PlayerPrefs.SetInt("Select" + selectIndex, 1);
-            priceText.text = "Выбрано";
+            string[] translates1 = new string[] { "Р’С‹Р±СЂР°РЅРѕ", "Active", "Activado", "Attivato", "Medizinisch", "РђРєС‚РёРІРѕРІР°РЅРёР№" };
+            priceText.text = translateText.Translate(translates1);
             for (int i = 0; i < selected.Length; i++)
             {
                 if (i == selectIndex)

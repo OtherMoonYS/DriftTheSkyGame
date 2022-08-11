@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
@@ -13,6 +13,7 @@ public class Pause : MonoBehaviour
     private CoinCollect coins;
     public GameObject ButSound;
     private Transform _transform;
+    private TranslateText translateText;
 
     [Header("Sprites")]
     public Sprite OnPauseSp;
@@ -28,6 +29,7 @@ public class Pause : MonoBehaviour
     {
         counter = FindObjectOfType<MeterCounter>();
         coins = FindObjectOfType<CoinCollect>();
+        translateText = FindObjectOfType<TranslateText>();
         pauseButImage = pauseBut.GetComponent<Image>();
     }
 
@@ -49,8 +51,10 @@ public class Pause : MonoBehaviour
         {
             isPause = true;            
             pausePanel.SetActive(true);
-            accountText.text = $"������� ����: {counter.account} m";
-            coinsText.text = $"������� �����: {coins.coinCountInGame}";
+            string[] translates1 = new string[] { "Текущий счёт: " + counter.account, "Current score: " + counter.account, "Cuenta corriente: " + counter.account, "Conto corrente: " + counter.account, "Girokonto: " + counter.account, "Поточний рахунок: " + counter.account };
+            string[] translates2 = new string[] { "Собрано монет: " + coins.coinCountInGame, "Current coins: " + coins.coinCountInGame, "Monedas recogidas: " + coins.coinCountInGame, "Monete raccolte: " + coins.coinCountInGame, "Münzen gesammelt: " + coins.coinCountInGame, "Монет зібрано: " + coins.coinCountInGame, };
+            accountText.text = translateText.Translate(translates1);
+            coinsText.text = translateText.Translate(translates2);
             foreach (GameObject obj in disableObj)
             {
                 obj.SetActive(false);
