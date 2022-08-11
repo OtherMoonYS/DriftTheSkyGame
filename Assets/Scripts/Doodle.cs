@@ -203,7 +203,8 @@ public class Doodle : MonoBehaviour
             else
             {
                 shieldAnvulnerabilityTime = startShieldAnvulnerabilityTime;
-                shieldAnim.Play("ShieldAnim");
+                shield.SetActive(false);
+                shield.SetActive(true);
             }
             Instantiate(shieldStart, _transform.position, Quaternion.identity);    
             Destroy(other.gameObject);

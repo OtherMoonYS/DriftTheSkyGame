@@ -12,6 +12,7 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     private string adID;
 
     private CoinCollect coins;
+    private TranslateText translateText;
     public Text coinsText;
 
     private bool canRaising = true;
@@ -29,6 +30,7 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         LoadAd();
         coins = FindObjectOfType<CoinCollect>();
         _transform = GetComponent<Transform>();
+        translateText = FindObjectOfType<TranslateText>();
     }
 
     public void LoadAd()
@@ -77,7 +79,8 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
             if (canRaising)
             {
                 coins.RaisingCoinCountInGame();
-                coinsText.text = "Всего собрано: " + coins.coinCountInGame;
+                string[] translates = new string[] { "Всего собрано: " + coins.coinCountInGame, "Total collected: " + coins.coinCountInGame, "Total recogido: " + coins.coinCountInGame, "Totale raccolto: " + coins.coinCountInGame, "Insgesamt gesammelt: " + coins.coinCountInGame, "Всього зібрано: " + coins.coinCountInGame };
+                coinsText.text = translateText.Translate(translates);
                 Instantiate(doubleCoins, _transform.position, Quaternion.identity);
                 rewardedBut.interactable = false;
                 canRaising = false;
