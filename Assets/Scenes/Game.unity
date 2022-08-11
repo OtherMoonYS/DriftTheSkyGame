@@ -2922,13 +2922,13 @@ MonoBehaviour:
   - {fileID: 8622107918767157799, guid: 24d0a749bd22d6a40af9709a5c4ae279, type: 3}
   - {fileID: 8622107918767157799, guid: 4628e51cdeb83d5459d6a57f74f37375, type: 3}
   - {fileID: 5565423862831806766, guid: 5f2fe5f53df938441a5af174e5a59a09, type: 3}
-  - {fileID: 8192264915229580968, guid: 7100a9874e768f44b941255187a367be, type: 3}
+  - {fileID: 8192264915229580968, guid: c7496e41661c56b418bdcd9a13cd35e1, type: 3}
   platformStartBlanks:
   - {fileID: 5565423862831806766, guid: 96c8e04cc6060624f9a0cfa7652d4c66, type: 3}
   - {fileID: 5565423862831806766, guid: 51906d10898309d4a89c0f4c9e0366f4, type: 3}
   - {fileID: 5565423862831806766, guid: ab9ace09eb8fcba4092a22d301ca8e55, type: 3}
-  easyBlanks: 200
-  middleBlanks: 500
+  easyBlanks: 300
+  middleBlanks: 600
   highBlanks: 2147483647
 --- !u!4 &1415684883
 Transform:
