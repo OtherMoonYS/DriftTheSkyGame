@@ -9,13 +9,13 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        _transform = GetComponent<Transform>();        
+        _transform = GetComponent<Transform>();
     }
     void Update()
-    {        
+    {
         if (doodlePos.position.y > _transform.position.y)
         {
             _transform.position = new Vector3(transform.position.x, doodlePos.position.y, transform.position.z);
         }
-    }    
+    }
 }
