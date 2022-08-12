@@ -271,4 +271,9 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("Select" + i, 0);
         }        
     }
+    public void LanguageUpdate()
+    {
+        LeftSwitch();
+        RightSwitch();
+    }
 }

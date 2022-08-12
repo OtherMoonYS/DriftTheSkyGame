@@ -34,13 +34,13 @@ Transform:
   - {fileID: 4212050152838731695}
   - {fileID: 3821800476542443173}
   - {fileID: 4212050153712555687}
+  - {fileID: 2551632753301205681}
   - {fileID: 4212050153444214562}
   - {fileID: 4212050153667198695}
   - {fileID: 4212050153021759882}
   - {fileID: 4212050152803488437}
-  - {fileID: 2551632753301205681}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4212050153946878339
 Camera:

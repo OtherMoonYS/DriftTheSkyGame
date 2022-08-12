@@ -30,10 +30,7 @@ public class FallingPlatform : MonoBehaviour
         if (collision.CompareTag("Player") && canFall)
         {
             rb.isKinematic = false;
-        }
-        else if (collision.gameObject.name.Equals("DeathZoneForPlatform"))
-        {
-            Destroy(gameObject);
+            Destroy(gameObject, 3);
         }
     }
 }

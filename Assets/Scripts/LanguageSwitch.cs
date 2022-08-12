@@ -10,7 +10,7 @@ public class LanguageSwitch : MonoBehaviour
     void Start()
     {
         if (PlayerPrefs.GetInt("LanguageÐóñ") == 0 && PlayerPrefs.GetInt("LanguageEng") == 0 && PlayerPrefs.GetInt("LanguageEsp") == 0 && PlayerPrefs.GetInt("LanguageItal") == 0 && PlayerPrefs.GetInt("LanguageDeu") == 0 && PlayerPrefs.GetInt("LanguageÓêð") == 0)
-        {
+        {/*
             if (Application.systemLanguage == SystemLanguage.Russian)
             {
                 SwitchLanguage("Ðóñ");
@@ -34,7 +34,8 @@ public class LanguageSwitch : MonoBehaviour
             else if (Application.systemLanguage == SystemLanguage.Ukrainian)
             {
                 SwitchLanguage("Óêð");
-            }
+            }*/
+            SwitchLanguage("Eng");
         }            
             
         for (int i = 0; i < languages.Length; i++)
@@ -58,8 +59,6 @@ public class LanguageSwitch : MonoBehaviour
             {
                 languageSwitch[i] = true; 
                 PlayerPrefs.SetInt("Language" + language, 1);
-                shop.LeftSwitch();
-                shop.RightSwitch();
             }
             else
             {

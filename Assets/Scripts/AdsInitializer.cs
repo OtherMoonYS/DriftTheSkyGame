@@ -25,6 +25,6 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
     {
-        Debug.Log("Инициализация не прошла( проверь подключение к сети");
+        Debug.Log("Инициализация не прошла( проверь подключение к сети что-ли");
     }
 }

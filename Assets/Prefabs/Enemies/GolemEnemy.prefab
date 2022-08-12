@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7365298817622671736}
   - component: {fileID: 7365298817622671737}
   - component: {fileID: 7365298817622671734}
+  - component: {fileID: -1170841538032123678}
   m_Layer: 0
   m_Name: GolemEnemy
   m_TagString: Enemy
@@ -170,3 +171,17 @@ MonoBehaviour:
   enemy: 0
   points: []
   batSpeed: 0
+--- !u!114 &-1170841538032123678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365298817622671735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7de0772f6e14041811500a5c857777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 0
+  type: 1
