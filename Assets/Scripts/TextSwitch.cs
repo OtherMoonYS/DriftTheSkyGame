@@ -11,7 +11,6 @@ public class TextSwitch : MonoBehaviour
     {
         text = GetComponent<Text>();        
     }
-
     void Update()
     {
         text.text = Translate(translates);

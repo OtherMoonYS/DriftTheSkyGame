@@ -1107,6 +1107,7 @@ GameObject:
   - component: {fileID: 545746252}
   - component: {fileID: 545746254}
   - component: {fileID: 545746253}
+  - component: {fileID: 545746255}
   m_Layer: 5
   m_Name: ItsPause
   m_TagString: Untagged
@@ -1176,6 +1177,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545746251}
   m_CullTransparentMesh: 1
+--- !u!114 &545746255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545746251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c432d8370692e14181b08113b6f81a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translates:
+  - "\u041F\u0430\u0443\u0437\u0430!"
+  - Pause!
+  - Pausa!
+  - Pausa!
+  - Pause!
+  - "\u041F\u0430\u0443\u0437\u0430!"
 --- !u!1 &551687963
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,6 +3540,7 @@ GameObject:
   - component: {fileID: 1750461468}
   - component: {fileID: 1750461470}
   - component: {fileID: 1750461469}
+  - component: {fileID: 1750461471}
   m_Layer: 5
   m_Name: ItsDeath
   m_TagString: Untagged
@@ -3589,6 +3610,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750461467}
   m_CullTransparentMesh: 1
+--- !u!114 &1750461471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750461467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c432d8370692e14181b08113b6f81a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translates:
+  - "\u041F\u043E\u0440\u0430\u0436\u0435\u043D\u0438\u0435 :("
+  - Defeat :(
+  - Derrota :(
+  - Sconfitta :(
+  - Niederlage :(
+  - "\u041F\u043E\u0440\u0430\u0437\u043A\u0430 :("
 --- !u!4 &1781297814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4212050153021759882, guid: 10bd3fe50284e174480e260122a2dc21, type: 3}

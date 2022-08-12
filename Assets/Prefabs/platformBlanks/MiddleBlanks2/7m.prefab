@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 0
-  type: 1
+  type: 2
 --- !u!1001 &384388138425987674
 PrefabInstance:
   m_ObjectHideFlags: 0
