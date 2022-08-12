@@ -3003,8 +3003,8 @@ MonoBehaviour:
   - {fileID: 5565423862831806766, guid: 96c8e04cc6060624f9a0cfa7652d4c66, type: 3}
   - {fileID: 5565423862831806766, guid: 51906d10898309d4a89c0f4c9e0366f4, type: 3}
   - {fileID: 5565423862831806766, guid: ab9ace09eb8fcba4092a22d301ca8e55, type: 3}
-  easyBlanks: 300
-  middleBlanks: 600
+  easyBlanks: 200
+  middleBlanks: 500
   highBlanks: 2147483647
 --- !u!4 &1415684883
 Transform:
