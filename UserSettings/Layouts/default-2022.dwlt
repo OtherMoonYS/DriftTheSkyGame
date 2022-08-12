@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 99
+  controlID: 115
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1080, y: 2160}
+  m_TargetSize: {x: 3840, y: 2160}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1251,8 +1251,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -540
-    m_HBaseRangeMax: 540
+    m_HBaseRangeMin: -1920
+    m_HBaseRangeMax: 1920
     m_VBaseRangeMin: -1080
     m_VBaseRangeMax: 1080
     m_HAllowExceedBaseRangeMin: 1
@@ -1327,9 +1327,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c2630000
-      m_LastClickedID: 25538
-      m_ExpandedIDs: 26fbffff4a63000052630000b2630000306400003864000054640000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 26fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 2.0448294, y: 4.385182, z: 0.044027306}
     speed: 2
-    m_Value: {x: 2.1322505, y: 4.3385377, z: 0.044819374}
+    m_Value: {x: 2.0448294, y: 4.385182, z: 0.044027306}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1698,7 +1698,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 1.839364
     speed: 2
-    m_Value: 1.760157
+    m_Value: 1.839364
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1899,7 +1899,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000207c0000c88c0000000000002e3200005ea30000eeb8000012c400001cb90000e4340000669d0000a8290000bcb50000a4ca0000a26b0000a2a30000589400004aaf0000b86b0000a46b0000cab70000daaf000040b700004ea00000beab0000b6c7000098990000a29900004c650000322b0000
+    m_ExpandedInstanceIDs: c6230000207c0000c88c00002e3200005ea30000eeb8000012c400001cb90000e4340000669d0000a8290000bcb50000a4ca0000a26b0000a2a30000589400004aaf0000b86b0000a46b0000cab70000daaf000040b700004ea00000beab0000b6c7000098990000a29900004c650000322b000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
