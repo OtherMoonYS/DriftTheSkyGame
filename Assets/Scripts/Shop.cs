@@ -31,7 +31,11 @@ public class Shop : MonoBehaviour
 
     private void Awake()
     {
-        coinCount = PlayerPrefs.GetInt("Coins");
+        if (PlayerPrefs.HasKey("Coins"))
+            coinCount = PlayerPrefs.GetInt("Coins");
+        else
+            coinCount = 0;
+
         for(int i = 1; i < buys.Length; i++)
         {
             buys[i] = PlayerPrefs.GetInt("Buy" + i) == 1;
@@ -40,10 +44,12 @@ public class Shop : MonoBehaviour
         {
             selected[i] = PlayerPrefs.GetInt("Select" + i) == 1;
         }        
-        if (PlayerPrefs.GetInt("Buy1") == 0 && PlayerPrefs.GetInt("Buy2") == 0 && PlayerPrefs.GetInt("Buy3") == 0 && PlayerPrefs.GetInt("Buy4") == 0 && PlayerPrefs.GetInt("Buy5") == 0)
+
+        if (!PlayerPrefs.HasKey("Buy1") && !PlayerPrefs.HasKey("Buy2") && !PlayerPrefs.HasKey("Buy3") && !PlayerPrefs.HasKey("Buy4") && !PlayerPrefs.HasKey("Buy5"))
         {
             Select();
         }
+
         LeftSwitch();
         RightSwitch();
     }
@@ -65,7 +71,7 @@ public class Shop : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Z))
         {
             coinCount = 0;
-            PlayerPrefs.SetInt("Coins", coinCount);
+            PlayerPrefs.DeleteKey("Coins");
             coinsText.text = coinCount.ToString();
         }
         else if (Input.GetKey(KeyCode.X))
@@ -74,6 +80,7 @@ public class Shop : MonoBehaviour
             PlayerPrefs.SetInt("Coins", coinCount);
             coinsText.text = coinCount.ToString();
         }
+        enabled = true;        
     }
 
     public void LeftSwitch()
@@ -264,11 +271,11 @@ public class Shop : MonoBehaviour
     {
         for (int i = 1; i < buys.Length; i++)
         {
-            PlayerPrefs.SetInt("Buy" + i, 0);
+            PlayerPrefs.DeleteKey("Buy" + i);
         }
         for (int i = 0; i < selected.Length; i++)
         {
-            PlayerPrefs.SetInt("Select" + i, 0);
+            PlayerPrefs.DeleteKey("Select" + i);
         }        
     }
     public void LanguageUpdate()
