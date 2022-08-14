@@ -5,7 +5,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 {
     public string androidID = "4874511";
     public string iosID = "4874510";
-    public bool testMode = true;
+    public bool testMode = false;
     private string gameID;
     void Start()
     {
@@ -15,7 +15,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     void AdsInitialize()
     {
         gameID = Application.platform == RuntimePlatform.IPhonePlayer ? iosID : androidID;
-        Advertisement.Initialize(gameID, testMode, this);
+        Advertisement.Initialize(gameID, this);
     }
 
     public void OnInitializationComplete()
