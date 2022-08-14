@@ -67,6 +67,7 @@ public class Doodle : MonoBehaviour
         translateText = FindObjectOfType<TranslateText>();
 
         rewAds.LoadAd();
+        inerstitialAds.LoadAd();
 
         deathCount = PlayerPrefs.GetInt("deathCount");
         shieldAnvulnerabilityTime = startShieldAnvulnerabilityTime;
@@ -270,15 +271,16 @@ public class Doodle : MonoBehaviour
         isAssign1 = true;
     }
     void DeathMinus()
-    {
+    {        
+        deathCount--;
+        PlayerPrefs.SetInt("deathCount", deathCount);
         if (deathCount == 0)
         {
             deathCount = startDeathCount;
             PlayerPrefs.SetInt("deathCount", deathCount);
             inerstitialAds.ShowAd();
+            Debug.Log("Все норм!");
             return;
         }
-        deathCount--;
-        PlayerPrefs.SetInt("deathCount", deathCount);        
     }    
 }

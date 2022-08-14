@@ -12,7 +12,7 @@ public class InerstitialAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
         LoadAd();
     }
 
-    void LoadAd()
+    public void LoadAd()
     {
         Advertisement.Load(gameID, this);
     }

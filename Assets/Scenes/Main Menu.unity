@@ -436,6 +436,18 @@ MonoBehaviour:
           m_StringArgument: "\u0420\u0443\u0441"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 974285784}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ButSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &285766522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,6 +1137,18 @@ MonoBehaviour:
           m_StringArgument: Esp
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 974285784}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ButSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &567325878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1318,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Ital
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 974285784}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ButSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &628979065
@@ -2206,7 +2242,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 836236167}
+      - m_Target: {fileID: 1653635385}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2349,6 +2385,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: "\u0423\u043A\u0440"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 974285784}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ButSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &903429205
@@ -2692,7 +2740,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 0
 --- !u!222 &1054883048
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2794,6 +2842,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Deu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 974285784}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ButSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1122205361
@@ -2953,7 +3013,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 836236167}
+      - m_Target: {fileID: 1653635385}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -3222,7 +3282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1328155996
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4234,6 +4294,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Eng
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 974285784}
+        m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+        m_MethodName: ButSoundPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1915793338

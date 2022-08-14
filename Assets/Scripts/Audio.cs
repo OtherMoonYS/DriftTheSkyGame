@@ -8,7 +8,11 @@ public class Audio : MonoBehaviour
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
-        volume = PlayerPrefs.GetFloat("AudioVolume");
+        if (PlayerPrefs.HasKey("AudioVolume"))
+            volume = PlayerPrefs.GetFloat("AudioVolume");
+        else
+            volume = 0.5f;
+
         audioSrc.volume = volume;
     }
 }
